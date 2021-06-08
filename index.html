@@ -30,6 +30,8 @@
             </ul>
             </div><!--.popup-header-->
             <div class="popup-content">
+
+            <form action="#" class="sign-in">
                 <div class="googlebtn">  
                     <button><img src="./resouces/image/google_logo.webp"/>Login with Google</button>
                 </div>
@@ -38,8 +40,6 @@
                     <p>OR</p>
                     <hr class="he">
                 </div>
-                
-            <form action="#" class="sign-in">
                 <label for="email">Email:</label>
                 <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
                 <label for="password">Password:</label>
@@ -47,25 +47,29 @@
                 <div class="link">
                 <a href="">Forgot Password?</a>
                 </div>
-                <input type="submit" id="submit" value="Submit">
+                <input type="submit" id="submit" value="Login">
+                
+                <div class="btmclass">
+                    <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                </div>
             </form>
 
-            <div class="btmclass">
-                <label>New to Internshala? Register (Student / Company)</label>
-            </div>
+           
             
             <form action="#" class="register">
-                <label for="email-register">Email:</label>
-                <input type="text" id="email-register">
-                <label for="password-register">Password:</label>
-                <input type="password" id="password-register">
-                <label for="password-confirmation">Confirm Password:</label>
-                <input type="password-confirmation" id="password-confirmation">
-                <p class="check-mark">
-                <input type="checkbox" id="accept-terms">
-                <label for="accept-terms">I agree to the <a href="#">Terms</a></label>
-                </p>
-                <input type="submit" id="submit" value="Create Account">
+               
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+                    <div class="link">
+                    <a href="">Forgot Password?</a>
+                    </div>
+                    <input type="submit" id="submit" value="Login">
+                    
+                    <div class="btmclass">
+                        <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    </div>
             </form>
             </div><!--.popup-content-->
         </div><!--.main-popup-->
@@ -77,7 +81,7 @@
             <div class="flex">
                 <div class="imgflex"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></div>
                 <div class="btn">
-                <div><a href="">Internships</a></div>
+                <div><a href="./intrenshala.html">Internships</a></div>
                 <div><a href="">Online Trainings <span class="spanStyle">OFFER</span></a></div>
                 <div><a href="">Fresh Jobs</a></div>
                 <div><button class="btnLogin" id="loginBtn">Login</button></div>

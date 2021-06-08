@@ -8,7 +8,6 @@
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s ease;
 }
 
 .overlay.visible {
@@ -29,23 +28,21 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-20px);
-  transition: all 0.5s ease;
   /*overflow: hidden;*/
 }
 
 .main-popup.visible {
   opacity: 1;
   visibility: visible;
-  transform: translateY(10px);
-  transition: all 0.5s ease;
+  transform: translate(60px, 60px);
   display: flex;
   flex-direction: column;
-  max-width: 340px;
+  width: 380px;
 }
 
 @media (min-width: 500px) {
   .main-popup {
-    width: 500px;
+    width: 340px;
     left: 50%;
     margin: 0 0 0 -250px;
   }
@@ -151,10 +148,6 @@ form.sign-in {
   left: 0;
   font-size: 1em;
   opacity: 1;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
 }
 
 form.sign-in.move-left {
@@ -201,15 +194,10 @@ input#submit {
 
 form.register {
   position: relative;
-  top: -280px;
+  top: -380px;
   left: 0;
   font-size: 1em;
   opacity: 0;
-  transform: translateX(450px);
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
 }
 
 form.register.move-left {
@@ -218,15 +206,19 @@ form.register.move-left {
 }
 
 form.register input {
-  border-radius: 5px;
+  color: #000;
+  height: 35px;
   width: 90%;
-  height: 40px;
-  margin: 5px 5% 15px 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: white;
   padding: 10px;
-  font-size: 1em;
-  color: #ceaee8;
   outline: none;
-  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  margin-bottom: 5%;
 }
 
 .link {
@@ -281,6 +273,10 @@ form.register input {
   text-align: center;
 }
 
-.btmclass label {
-  font-size: 12px;
+.btmclass p {
+  font-size: 14px;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
 }
