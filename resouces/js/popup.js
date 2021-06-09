@@ -9,11 +9,12 @@ $(function() {
   var $register = $('#register');
   var $formSignIn = $('form.sign-in');
   var $formRegister = $('form.register');
-  
+  var $cont = $('.cont');
 
   $('#loginBtn').on('click', function(){
     $overlay.addClass('visible');
     $mainPopUp.addClass('visible');
+    $cont.addClass('Disble');
     $signIn.addClass('active');
     $register.removeClass('active');
     $formRegister.removeClass('move-left');
@@ -25,6 +26,7 @@ $(function() {
   });
   $('#popup-close-button a').on('click', function(e){
     e.preventDefault();
+    $cont.removeClass('Disble');
     $overlay.removeClass('visible');
     $mainPopUp.removeClass('visible');
   });
