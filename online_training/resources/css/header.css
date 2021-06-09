@@ -1,80 +1,102 @@
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
 }
 .header {
   height: 72px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
   margin-bottom: 2px;
 }
-.height-cont {
+
+.header > .height-cont {
   height: 100%;
+  background-color: #f1f1f1;
 }
- .navFlex {
+
+.header > .height-cont > .flex {
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
   height: 100%;
-  padding: 0px 60px;
 }
- .imgflex {
+
+.header > .height-cont > .flex > .imgflex {
   display: flex;
   justify-content: center;
 }
-.imgflex > img {
+
+.header > .height-cont > .flex > .imgflex > img {
   padding-bottom: 10px;
-  padding-left: 35px;
 }
-.navFlex > .btn {
+
+.header > .height-cont > .flex > .btn {
   display: flex;
-  /* width is changed by pulkit as the lohin button is removed so the width has to be adjusted */
-  width: 55%;
+  width: 30%;
   justify-content: space-evenly;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 14px;
   padding: 0px;
 }
-.navFlex > .btn > div {
+.header > .height-cont > .flex > .btn > div {
   height: 100%;
   display: flex;
   align-items: center;
 }
-.navFlex > .btn > div > a {
+
+.header > .height-cont > .flex > .btn > div > a {
   text-decoration: none;
-  color: #484848;
-  font-weight: 500;
+  color: #525050;
+  font-weight: bold;
   font-size: 14px;
 }
-.header > .height-cont > .navFlex > .btn > div > a:hover {
+
+.header > .height-cont > .flex > .btn > div > a:hover {
   color: #008bdc;
 }
-.header > .height-cont > .navFlex > .btn > div > a > .spanStyle {
+
+.header > .height-cont > .flex > .btn > div > a > .spanStyle {
   background-color: #ff8c00;
   color: white;
   padding: 5px;
   border-radius: 3px;
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 13px;
 }
-.header > .height-cont > .navFlex > .btn > div > .btnLogin {
-  background-color: white;
+
+.header > .height-cont > .flex > .btn > div > .btnLogin {
+  background-color: #f1f1f1;
   border: none;
-  border: 1px solid #00a5ec;
-  border-radius: 4px;
   color: #00a5ec;
   padding: 9px 20px 9px 20px;
   font-weight: bold;
+  font-size: 14px;
 }
-.header > .height-cont > .navFlex > .btn > .dropdown:hover {
+
+.header > .height-cont > .flex > .btn > .dropdown > div > .btnRegister {
+  background-color: #00a5ec;
+  border: none;
+  border: 1px solid #00a5ec;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  font-weight: bold;
+}
+
+.header > .height-cont > .flex > .btn > .dropdown:hover {
   border-bottom: 10px solid #008bdc;
 }
-.header > .height-cont > .navFlex > .btn > .dropdown > div {
+
+.header > .height-cont > .flex > .btn > .dropdown > div {
   position: relative;
   display: inline-block;
 }
-.header > .height-cont > .navFlex > .btn > .dropdown > div > .dropdown-content {
+
+.header > .height-cont > .flex > .btn > .dropdown > div > .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -82,16 +104,14 @@
   padding: 12px 16px;
   right: 0;
   left: auto;
-  /* margin decreased by pulkit for drop down box to change the width of blue line behind the drop down*/
-  margin-top: 13%;
-  /* min-width changed by pulkit for drop down box */
-  min-width: 180px;
+  margin-top: 18%;
+  min-width: 120px;
   z-index: 1;
 }
 
 .header
   > .height-cont
-  > .navFlex
+  > .flex
   > .btn
   > .dropdown:hover
   > div
@@ -100,7 +120,7 @@
 }
 .header
   > .height-cont
-  > .navFlex
+  > .flex
   > .btn
   > .dropdown
   > div
@@ -112,7 +132,7 @@
 
 .header
   > .height-cont
-  > .navFlex
+  > .flex
   > .btn
   > .dropdown
   > div
@@ -129,7 +149,7 @@
 
 .header
   > .height-cont
-  > .navFlex
+  > .flex
   > .btn
   > .dropdown
   > div
@@ -140,16 +160,4 @@
   color: #00a5ec;
 }
 
-
-
-
-/* ------------------------media queries --start-------------------- */
-
-
-@media (min-width: 1256px)
-{
-.navFlex{
-  padding: 0px 100px;
-}
-  
-}
+/*main css */

@@ -1,249 +1,445 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-}
-#middle {
-  width: 100vw;
-  height: 100vh;
-}
-.midCont {
-  display: flex;
+  * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body{
+    max-width: 100vw;
+  }
+  #cont{
+    padding: 0px 16px;
+  }
+  #middle {
+      border-bottom: 1px solid #EEE;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      padding: 0%;
+  }
+  #max-width-cont{
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100vw;
+        margin-left: auto;
+      margin-right: auto;
+          display: block;
+  }
+  .midCont {
+    display: flex;
+    padding-right: 32px;
+    padding-left: 32px;
+    margin-left: 0;
+    border-bottom: 1px solid #EEE;
+  }
+  .midText {
+    width: 100%;
+    background-image: url(../image/emp3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: bottom;
+  }
+  .midText > p:nth-child(1) {
+    margin-bottom: 0;
+    margin-top: 48px;
+    color: #333;
+    font-family: Inter,sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.181818;
+  }
+  .midText > p:nth-child(2) {
+    font-weight: 600;
+    font-size: 24px;
+    margin-top: 8px;
+    line-height: 1.333;
+    color: #333;
+  }
+  .midText > p:nth-child(3) {
+    font-size: 18px;
+    margin-top: 12px;
+    line-height: 1.22222;
+    color: #333;
 
-  width: 100%;
-  height: 100%;
-  background-image: url(../image/emp3.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.midText {
-  padding: 3% 5.5%;
-  width: 63%;
-}
-.midText > p:nth-child(1) {
-  font-size: 3.3vw;
-  font-weight: bold;
-  color: #333333;
-  margin-bottom: 0%;
-}
-.midText > p:nth-child(2) {
-  font-size: 1.72vw;
-  font-weight: 580;
-  color: #3b3b3b;
-  margin-bottom: 1%;
-  margin-top: 0%;
-}
-.midText > p:nth-child(3) {
-  font-size: 1.3vw;
-  font-weight: 350;
-  color: #3b3b3b;
-  margin-bottom: 1%;
-  margin-top: 1%;
-}
+  }
 
-/* .checkBox{
-  display: flex;
-  font-size: 1.3vw;
-  font-weight: 580;
-  color: #3b3b3b;
-  margin-bottom: .3%;
-}
-.checkBox > img{
-  margin-right: .5%;
-} */
-.form {
-  margin: 2%;
-  width: 80%;
-  height: 80%;
-  min-height: 240px;
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-  padding: 2%;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 4px 4px 30px 3px rgba(207, 206, 206, 0.575);
-}
-.form > p,
-.form > input {
-  font-size: 1vw;
-}
-.name div:nth-child(2) {
-  margin-left: 5%;
-}
-.form > .name > div {
-  width: 50%;
-  margin-bottom: 2vh;
-  margin-top: 2vh;
-}
-.form > p {
-  margin-bottom: 2vh;
-  margin-top: 1.5vh;
-}
-.form > .nameInput {
-  display: flex;
-}
-.form > .name {
-  display: flex;
-}
-.name {
-  font-size: 1vw;
-}
-.form > input {
-  height: 4vw;
-  min-height: 3vw;
-  font-size: 1vw;
-  width: 100%;
-  padding-left: 7%;
-  border: 1px solid #666666;
-}
-.nameInput > input {
-  padding-left: 5%;
-  font-size: 1vw;
-  height: 3vw;
-  border: 1px solid #666666;
-  width: 47%;
-}
-.nameInput > input:last-child {
-  margin-left: 6%;
-}
-.form p:nth-child(9) {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  font-size: 0.8vw;
-  text-align: center;
-}
-.form p:nth-child(11) {
-  text-align: center;
-  margin-top: 3.5vh;
-}
-.form p:nth-child(9) > span,
-:nth-child(11) > span {
-  color: #00a5ec;
-}
-.btnSignup {
-  height: 4vw;
-  min-width: 3vw;
-  background-color: #00a5ec;
-  color: white;
-  font-weight: bold;
-  font-size: 1vw;
-  border: 2px solid #00a5ec;
-  border-radius: 5px;
-}
-.form > .btnGoogle {
-  height: 10%;
+  /* .checkBox{
+    display: flex;
+    font-size: 1.3vw;
+    font-weight: 580;
+    color: #3b3b3b;
+    margin-bottom: .3%;
+  }
+  .checkBox > img{
+    margin-right: .5%;
+  } */
+  #rightSide{
+    display: inline-block;
+      width: 375px;
+      margin-bottom: 80px;
+  }
+
+  #formCont{
+    margin-left: 15px;
+    padding: 30px 0;
+    width: 360px;
+    text-align: left;
+  }
+  .form {
+    /* display: flex;
+    flex-direction: column;   */
+      border: 0;
+      background-color: #fff;
+      box-sizing: border-box;
+      margin-top: 10px;
+      box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
+      margin-bottom: 0;
+
+      position: relative;
+      z-index: 0;
+      border-radius: 6px;
+      padding: 24px;
+      background: #fff;
+      display: block;
+  }
+  .form-group{
+    clear: both;
+    margin-bottom: 16px;
+  }
+  label {
+      font-family: Inter,sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 4px;
+      display: inline-block;
+  }
+  .form > p{
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    margin-left: 2px;
+    display: block;
+        margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  .form-control{
+  box-shadow: none;
+  padding: 11px;
+  background: #fff;
   color: #484848;
-  background-color: white;
-  font-weight: bold;
-  font-size: 1vw;
-  border: 1px solid #dee2e6;
-  border-radius: 2.5px;
-}
-.form > hr {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1.14285714;
+  font-family: Inter,sans-serif;
+  display: block;
   width: 100%;
-  border: 1px solid #e0e0e0;
-}
-.googleBox {
-  height: 3vw;
-  width: 100%;
-  background-color: white;
-  border: 1px solid #dee2e6;
-  border-radius: 2px;
-  color: #484848;
-  display: flex;
-}
-.googleBox > p {
-  margin-top: 4%;
-  font-size: 1vw;
-  font-weight: bold;
-}
-.googleBox > img {
-  margin: 4% 2% auto 22%;
-  width: 5%;
-}
-
-.hiring {
-  width: 100vw;
-  height: 60vh;
-  text-align: center;
-}
-.heading > p {
-  font-size: 2vw;
-  font-weight: 580;
-  color: #333333;
-  padding: 1%;
-  text-align: center;
-}
-.hireCardCont {
-  display: flex;
-  height: 82%;
-  width: 85%;
-  margin: auto;
-}
-.hireCard {
-  width: 33.3%;
-  height: 100%;
-}
-.hireCard > img {
-  width: 80%;
-  height: 75%;
-  padding: 0%;
-}
-.hireCard > p:nth-child(2) {
-  font-size: 1.5vw;
-  font-weight: 580;
-  color: #333333;
-}
-.hireCard > p:nth-child(3) {
-  font-size: 1.1vw;
   font-weight: 400;
-  color: #333333;
-}
-.company {
+  }
+  .form > input{
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  border-radius: 3px !important;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .form .row .col:first-of-type {
+      padding-left: 15px;
+      padding-right: 3px;
+  }
+  .form .row .col:last-of-type {
+      padding-left: 3px;
+      padding-right: 15px;
+  }
+  .col{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  .col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .col-9 {
+      -ms-flex: 0 0 75%;
+      flex: 0 0 75%;
+      max-width: 75%;
+  }
+  .label_toc {
+      font-size: 12px;
+      color: #333333;
+      line-height: 1.57;
+      font-weight: 400;
+  }
+  button, input{
+    overflow: visible;
+    
+  }
+  button, input, optgroup, select, textarea {
+    margin: 0;
+  }
+  .restricted_keyword_error {
+      font-size: 12px;
+      color: #E5330E;
+      margin-top: -8px;
+      margin-bottom: 16px;
+      padding: 0 16px;
+      font-family: Inter,sans-serif;
+      font-weight: 500;
+  }
+  #internship_registration_button_container{
+    display: block;
+  }
+  #job_employer_registration_button {
+      text-align: center;
+      margin: 12px 0 16px;
+  }
+  .btn.btn-primary {
+    width: 100%;
+      padding: 12px 16px;
+      background: #00A5EC;
+      border-radius: 3px;
+      border: 1px solid #00A5EC;
+  }
+  .btn {
+      padding: 7px 15px;
+      font-weight: 600;
+      min-width: 80px;
+      line-height: 1.14285714;
+      font-size: 14px;
+  }
+  .btn-primary {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  button, input, optgroup, select, textarea {
+      margin: 0;
+      font-family: inherit;
+  }
+  #job_registration_form_extras .label_toc_2 {
+      text-align: center;
+  }
+  .hiring {
   width: 100vw;
-  height: 60vh;
-  margin-top: 3%;
-}
-.profileCard {
-  width: 45%;
-  height: 50%;
-  margin: auto;
-  border: 2px solid rgb(161, 161, 161);
-}
-.brands {
-  display: flex;
-  margin: auto;
-  width: 45%;
-  height: 20%;
-}
-.brands > div {
-  width: 100%;
-  height: 100%;
-}
-.brands > div > img {
-  padding: 1%;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-}
-.register {
-  width: 100vw;
-  height: 20vh;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.register > button {
-  width: 220px;
-  height: 50px;
-  background: #00a5ec;
-  color: white;
-  font-size: 1.2vw;
-  font-weight: 600;
-  border-radius: 5px;
-  border-style: none;
-}
+  text-align: center;
+
+  }
+  .heading > p {
+      text-align: center;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 36px;
+      padding: 40px 0px;
+  }
+  .hireCardCont {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    height: 82%;
+    width: 85%;
+    margin: auto;
+  }
+  .hireCard {
+    width: 33.3%;
+    height: 100%;
+  }
+  .hireCard > img {
+    width: 152px;
+    margin-bottom: 16px;
+  }
+  .hireCard > p:nth-child(2) {
+    font-size: 18px;
+    line-height: 1.33333333;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: .5rem;
+  }
+  .hireCard > p:nth-child(3) {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333333;
+  }
+  .company {
+    width: 100vw;
+    height:50vh;
+    margin-top: 3%;
+  }
+  .profileCard {
+    max-width: 648px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+    border-radius: 6px;
+      /* remove height after applying content*/
+    height: 50%;   
+    margin: auto;
+  }
+
+  /* feedback brands logos and toggle-- start*/
+
+  .brands {
+    display: flex;
+    margin: auto;
+    padding: 10px 0px;
+    width: 648px;
+    height: 15%;
+  }
+  .brands > div {
+    width: 20%;
+    height: 100%;
+  }
+  .brand-logo{
+        text-indent: -999px;
+      cursor: pointer;
+      background-color: #fff;
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      transition:  .6s ease;
+      width: 120px;
+      height: 48px;
+  }
+  .kotak-off{
+    
+    background: url('../image/kotak-off.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+  }
+  .disney-off{
+    background: url('../image/disney-off.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .airbnb-off{
+    background: url('../image/airbnb-off.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .teach-off{
+    background: url('../image/teach-off.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .arc-off{
+    background: url('../image/arc-off.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+
+  /* on */
+
+  .kotak-on{
+    
+    background: url('../image/kotak-on.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+  }
+  .disney-on{
+    background: url('../image/disney-on.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .airbnb-on{
+    background: url('../image/airbnb-on.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .teach-on{
+    background: url('../image/teach-on.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+  .arc-on{
+    background: url('../image/arc-on.png') no-repeat;
+    background-size: 90%;
+    background-position: center;
+
+  }
+
+  /* feedback brands logos and toggle-- end*/
+
+  .register {
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .register > button {
+    width: 215px;
+    padding: 12px;
+    font-size: 16px;
+    margin: auto;
+    background: #00A5EC;
+    border-radius: 3px;
+    border: 1px solid #00A5EC;
+    color: white;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    display: inline-block;
+  }
+
+
+  /* ------------------------media queries --start-------------------- */
+
+  @media (min-width: 1256px)
+  {#max-width-cont{
+    padding: 0px 100px;
+  }
+  #rightSide{
+      margin-bottom: 40px;}
+    
+  }
+  @media (min-width: 1024px)
+  {
+    .navFlex{
+      padding: 0px 100px;
+    } 
+  }
+  @media (max-width: 1440px)
+  {#rightSide{
+      margin-bottom: 55px;}
+  }
+  @media (max-width: 1255px)
+  {#rightSide{
+      margin-bottom: 100px;}
+    
+  }

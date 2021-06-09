@@ -1,0 +1,10 @@
+#slideshow {
+  margin: auto;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+#slideshow > div {
+  position: absolute;
+}
