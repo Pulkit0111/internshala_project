@@ -194,13 +194,34 @@
 
 .LSlider {
   border: 1px solid #eee;
-  width: 30%;
+  width: 35%;
   height: 600px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
   border-radius: 10px;
   box-sizing: border-box;
   position: sticky;
   top: 20px;
+  overflow: auto;
+}
+
+/* width */
+.LSlider::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.LSlider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.LSlider::-webkit-scrollbar-thumb {
+  background: rgb(182, 181, 181);
+}
+
+/* Handle on hover */
+.LSlider::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .LSlider > p {
@@ -208,12 +229,107 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .LSlider > .gap {
   width: 90%;
   margin: auto;
+}
+
+.LSlider > .clear {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.LSlider > .line {
+  display: flex;
+  height: 0px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #8a8a8a;
+  font-weight: 700;
+}
+
+.LSlider > .filterSearch {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.LSlider > .filterSearch > p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.LSlider > .filterSearch > .flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.LSlider > .filterSearch > .flex > input {
+  height: 45px;
+  width: 75%;
+  padding-left: 20px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid gray;
+  border-right: none;
+}
+
+.LSlider > .filterSearch > .flex > .searchBtn {
+  flex: 1;
+  background-color: #00a5ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.LSlider > .filterSearch > .flex > .searchBtn > button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.LSlider > .check {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.LSlider > .range {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.LSlider > .range > .prang > input {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.LSlider > .range > .prang > .rate {
+  display: flex;
+  column-gap: 30px;
 }
 
 .LSlider > .gap > label {
@@ -236,7 +352,7 @@
 }
 
 .RSlider {
-  width: 70%;
+  width: 65%;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -257,4 +373,76 @@
 #filter_ui_icon_desktop {
   color: #00a5ec;
 }
-/*end intrenship page css */
+/*end intrenship page css*/
+
+/*switch button css*/
+.LSlider > .check > div > .switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.LSlider > .check > div > .switch > input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.LSlider > .check > div > .switch > .slide {
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 0;
+  right: 0;
+  bottom: 2px;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.LSlider > .check > div > .switch > .slide:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  background-color: gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.LSlider > .check > div > p {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.LSlider > .check > div > .switch > input:checked + .slide {
+  background-color: #2196f3;
+}
+
+.LSlider > .check > div > .switch > input:focus + .slide {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+.LSlider > .check > div > .switch > input:checked + .slide:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.LSlider > .check > div > .switch > .slide.round {
+  border-radius: 34px;
+}
+
+.LSlider > .check > div > .switch > .slide.round:before {
+  border-radius: 50%;
+}
+
+.tooltip-inner {
+  max-width: 500px !important;
+  width: 90% !important;
+  line-height: 20px;
+  font-size: 15px;
+}
+/*end switch css*/

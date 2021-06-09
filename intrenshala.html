@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./resouces/css/popup.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="cont">
@@ -30,6 +29,8 @@
             </ul>
             </div><!--.popup-header-->
             <div class="popup-content">
+
+            <form action="#" class="sign-in">
                 <div class="googlebtn">  
                     <button><img src="./resouces/image/google_logo.webp"/>Login with Google</button>
                 </div>
@@ -38,8 +39,6 @@
                     <p>OR</p>
                     <hr class="he">
                 </div>
-                
-            <form action="#" class="sign-in">
                 <label for="email">Email:</label>
                 <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
                 <label for="password">Password:</label>
@@ -47,25 +46,29 @@
                 <div class="link">
                 <a href="">Forgot Password?</a>
                 </div>
-                <input type="submit" id="submit" value="Submit">
+                <input type="submit" id="submit" value="Login">
+                
+                <div class="btmclass">
+                    <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                </div>
             </form>
 
-            <div class="btmclass">
-                <label>New to Internshala? Register (Student / Company)</label>
-            </div>
+           
             
             <form action="#" class="register">
-                <label for="email-register">Email:</label>
-                <input type="text" id="email-register">
-                <label for="password-register">Password:</label>
-                <input type="password" id="password-register">
-                <label for="password-confirmation">Confirm Password:</label>
-                <input type="password-confirmation" id="password-confirmation">
-                <p class="check-mark">
-                <input type="checkbox" id="accept-terms">
-                <label for="accept-terms">I agree to the <a href="#">Terms</a></label>
-                </p>
-                <input type="submit" id="submit" value="Create Account">
+               
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+                    <div class="link">
+                    <a href="">Forgot Password?</a>
+                    </div>
+                    <input type="submit" id="submit" value="Login">
+                    
+                    <div class="btmclass">
+                        <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    </div>
             </form>
             </div><!--.popup-content-->
         </div><!--.main-popup-->
@@ -105,7 +108,7 @@
         <div class="slider">
         <!--left slider-->
         <div class="LSlider">
-         <p><i id="filter_ui_icon_desktop" class="ic-16-filter"></i> Filters</p>
+         <p><i id="filter_ui_icon_desktop" class="ic-24-filter-applied"></i> Filters</p>
         <div class="gap">
 
           <label>Category</label>
@@ -116,7 +119,107 @@
         
         </div>
 
-        
+         <div class="check">
+             <div>
+                 <p>work from home</p>
+             </div>
+              <div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slide round"></span>
+                  </label>
+              </div>
+         </div>
+
+         <div class="check">
+            <div>
+                <p>Part-time</p>
+            </div>
+             <div>
+               <label class="switch">
+                   <input type="checkbox">
+                   <span class="slide round"></span>
+                 </label>
+             </div>
+        </div>
+
+        <div class="range">
+            <div class="content">
+                <p>Desired minimum monthly stipend (₹)</p>
+            </div>
+             <div class="prang">
+                <input type="range" name="vol" min="0" max="12100" value="0">
+                <div class="rate">
+                    <p>0</p>
+                    <p>2k</p>
+                    <p>4k</p>
+                    <p>6k</p>
+                    <p>8k</p>
+                    <p>10k</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="gap">
+
+            <label>Starting from (or after)</label>
+            <input type="text" placeholder="Choose date"/>
+  
+            <label>Max. duration (months)</label>
+            <input type="text" placeholder="Choose duration"/>
+          
+      </div>
+
+
+      <div class="check">
+        <div>
+            <p>
+                Internships for women <a href="#" data-toggle="tooltip" data-placement="top" title="Will show internships which are also open to women (re)starting their careers"><i class="open_popover ic-16-help-circle" popover_content="Will show internships which will offer a full-time job to the intern at the end of internship depending on performance" data-original-title="" title=""></i></a></p>
+        </div>
+         <div>
+           <label class="switch">
+               <input type="checkbox">
+               <span class="slide round"></span>
+             </label>
+         </div>
+    </div>
+
+    <div class="check">
+        <div>
+            <p>Internships with job offer <a href="#" data-toggle="tooltip" data-placement="top" title="Will show internships which will offer a full-time job to the intern at the end of internship depending on performance"><i class="open_popover ic-16-help-circle" popover_content="Will show internships which will offer a full-time job to the intern at the end of internship depending "></i></a></p>
+        </div>
+         <div>
+           <label class="switch">
+               <input type="checkbox">
+               <span class="slide round"></span>
+             </label>
+         </div>
+    </div>
+
+        <div class="clear">
+         <a href="">Clear all</a>
+        </div>
+
+       <div class="line">
+          <hr style="width:50%">
+          <p>OR</p>
+          <hr style="width:50%">
+       </div>
+
+
+       <div class="filterSearch">
+           <p>Search</p>
+           <div class="flex">
+        <input type="text" placeholder="e.g. MBA, Design, Mumbai">
+        <span class="searchBtn">
+            <button type="button">
+                <i class="icon_search ic-24-search"></i>
+            </button>
+        </span>
+    </div>
+        </div>
+
         </div>
         <!--end left slider-->
 
