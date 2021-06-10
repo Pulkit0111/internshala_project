@@ -1,37 +1,45 @@
 var post =
     [
         {
-            intpresent: "Internshala presents",
-            heading: "The Dream Icon Experience",
-            tagline: "You, your favourite icon, and the chance of a lifetime!",
+            heading: "Social Media Marketing",
+            tagline: "The Zowie Store",
             launch_date: "4th June'21",
-            REWARDS: "₹5000, certificates & exciting mementos!",
+            REWARDS: "₹5000",
             apply_by: "11th June'21",
+            duration:"4 Weeks",
             span: ['Experience', 'Part time allowed'],
-            source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
+            source:"https://internshala.com/cached_uploads/logo%2F60be130364bec1623069443.jpg"
         },
         {
-            intpresent: "Internshala presents",
-            heading: "The Dream Icon Experience",
-            tagline: "You, your favourite icon, and the chance of a lifetime!",
+            heading: "Mobile App Development",
+            tagline: "snippt",
             launch_date: "4th June'21",
-            REWARDS: "₹5000, certificates & exciting mementos!",
+            REWARDS: "₹5000",
             apply_by: "11th June'21",
+            duration:"6 Months",
             span: ['Experience','alow','Part time allowed'],
-            source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
+            source:"https://internshala.com/cached_uploads/logo%2F5e2fdcb75bb791580194999.png"
+        },
+        {
+            heading: "Data Analytics (Supply Chain Management)",
+            tagline: "Ruby Capital",
+            launch_date: "11th June'21",
+            REWARDS: "₹5000",
+            apply_by: "11th June'21",
+            span: ['Experience', 'Part time allowed'],
+            source:"https://internshala.com/cached_uploads/logo%2F5e2fdd59cf2061580195161.png"
         },
         {
             intpresent: "Internshala presents",
             heading: "The Dream Icon Experience",
             tagline: "You, your favourite icon, and the chance of a lifetime!",
             launch_date: "4th June'21",
-            REWARDS: "₹5000, certificates & exciting mementos!",
+            REWARDS: "₹5000",
             apply_by: "11th June'21",
             span: ['Experience', 'Part time allowed'],
             source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
         },
         {
-            intpresent: "Internshala presents",
             heading: "The Dream Icon Experience",
             tagline: "You, your favourite icon, and the chance of a lifetime!",
             launch_date: "4th June'21",
@@ -42,11 +50,14 @@ var post =
         },
     ];
    
-function postz()
+function renderPost()
 {
     var RSlider = document.getElementById("RSlider");
 
-    post.forEach(function (el)
+    var post_count = document.getElementById("postcount");
+    post_count.innerText = post.length;
+
+    post.reverse().forEach(function (el)
     {
         var div = document.createElement('div');
         div.setAttribute('class', 'order');
@@ -56,15 +67,21 @@ function postz()
         
         var div3 = document.createElement('div');
         div3.setAttribute('class', 'contents');
-
-        var p = document.createElement('p');
-        p.innerText = el.intpresent;
+        if (el.intpresent) {
+            var p = document.createElement('p');
+            p.innerText = el.intpresent;
+        }
         var h4 = document.createElement('h4');
         h4.innerText = el.heading;
         var p2 = document.createElement('p');
         p2.innerText = el.tagline;
-
-        div3.append(p, h4, p2);
+        if (el.intpresent)
+        {
+            div3.append(p, h4, p2);
+        }
+        else {
+            div3.append(h4, p2);
+        }
         
         var div4 = document.createElement('div');
         div4.setAttribute('class', 'img');
@@ -91,7 +108,7 @@ function postz()
         point2.setAttribute('class', 'point');
         var title2 = document.createElement('div');
         title2.setAttribute('class', 'titles');
-        title2.innerHTML = ` <i class="ic-16-money"></i><span>REWARDS</span>`;
+        title2.innerHTML = ` <i class="ic-16-money"></i><span>Stipend</span>`;
         var p4 = document.createElement('p');
         p4.innerText = el.REWARDS;
         point2.append(title2, p4);
@@ -104,8 +121,23 @@ function postz()
         var p5 = document.createElement('p');
         p5.innerText = el.apply_by;
         point3.append(title3, p5);
+        if (el.duration)
+        {
+            var point4 = document.createElement('div');
+            point4.setAttribute('class', 'point');
+            var title4 = document.createElement('div');
+            title4.setAttribute('class', 'titles');
+            title4.innerHTML = `<i class="ic-16-calendar"></i><span>DURATION</span>`;
+            var p6 = document.createElement('p');
+            p6.innerText = el.duration;
+            point4.append(title4, p6);
+            div21.append(point, point4,point2, point3);
+        }
         
-        div21.append(point, point2, point3);
+        else
+        {
+            div21.append(point,point2, point3);
+        }
         
         var div22 = document.createElement('div');
         div22.setAttribute('class', 'details');
@@ -124,7 +156,6 @@ function postz()
         div22.append(div221,divLa);
          
         div.append(div2, div21, div22);
-        
         RSlider.append(div);
 
         
@@ -132,4 +163,4 @@ function postz()
     
 }
 
-postz();
+renderPost();
