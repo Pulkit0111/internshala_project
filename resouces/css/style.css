@@ -370,6 +370,118 @@
   min-height: 200px;
 }
 
+.RSlider > .pramo {
+  background: #fff;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 8%);
+  border-radius: 6px;
+  min-height: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.RSlider > .pramo > .intrenship > .promotion {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.RSlider > .pramo > .intrenship > .promotion > span {
+  background: orange;
+  color: white;
+  border-top-left-radius: 25px;
+  padding: 2px;
+  border-bottom-left-radius: 25px;
+  box-sizing: border-box;
+  width: 15%;
+  text-align: center;
+}
+
+.RSlider > .pramo > .intrenship > .praP {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-size: 15px;
+}
+.RSlider > .pramo > .intrenship > .praP > div,
+.paragraph {
+  display: flex;
+}
+
+.RSlider > .pramo > .intrenship > .praP > div > p > span {
+  font-weight: 700;
+  margin-left: 5px;
+}
+
+.RSlider > .order > .intrenship {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RSlider > .order > .intrenship > .contents > p {
+  color: #8a8a8a;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  line-height: 1.43;
+}
+.RSlider > .order > .intrenship > .contents > h4 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.RSlider > .order > .discrip {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.RSlider > .order > .details,
+.pramo > .details {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.RSlider > .pramo > .paddingS {
+  padding-right: 20px;
+}
+
+.RSlider > .order > .details > .spanCategory,
+.pramo > .details > .spanCategory {
+  display: flex;
+  column-gap: 14px;
+}
+
+.RSlider > .order > .details > .spanCategory > span,
+.pramo > .details > .spanCategory > span {
+  background-color: #f8f8f8;
+  color: #666;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.RSlider > .order > .discrip > .point {
+  max-width: 70%;
+}
+.RSlider > .order > .discrip > .point > .titles {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+}
+
+.RSlider > .order > .intrenship > .content {
+  width: 70%;
+}
+
+.RSlider > .order > .intrenship > .img > img {
+  max-width: 150px;
+  max-height: 60px;
+}
 #filter_ui_icon_desktop {
   color: #00a5ec;
 }
