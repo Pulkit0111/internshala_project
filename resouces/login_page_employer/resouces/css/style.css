@@ -32,6 +32,8 @@
     margin-left: 0;
     border-bottom: 1px solid #EEE;
   }
+ 
+  
   .midText {
     width: 100%;
     background-image: url(../image/emp3.png);
@@ -39,6 +41,7 @@
     background-size: 100%;
     background-position-y: bottom;
   }
+ 
   .midText > p:nth-child(1) {
     margin-bottom: 0;
     margin-top: 48px;
@@ -63,16 +66,6 @@
 
   }
 
-  /* .checkBox{
-    display: flex;
-    font-size: 1.3vw;
-    font-weight: 580;
-    color: #3b3b3b;
-    margin-bottom: .3%;
-  }
-  .checkBox > img{
-    margin-right: .5%;
-  } */
   #rightSide{
     display: inline-block;
       width: 375px;
@@ -268,6 +261,13 @@
     width: 85%;
     margin: auto;
   }
+  @media (max-width: 992px){
+    .hireCardCont{
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  }
   .hireCard {
     width: 33.3%;
     height: 100%;
@@ -290,27 +290,146 @@
   }
   .company {
     width: 100vw;
-    height:50vh;
     margin-top: 3%;
   }
-  .profileCard {
-    max-width: 648px;
-    padding: 24px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
-    border-radius: 6px;
-      /* remove height after applying content*/
-    height: 50%;   
+
+  /* feedback brands logos and toggle-- end*/
+
+  .register {
+    width: 100vw;
     margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .register > button {
+    width: 215px;
+    padding: 12px;
+    font-size: 16px;
+    margin: auto;
+    background: #00A5EC;
+    border-radius: 3px;
+    border: 1px solid #00A5EC;
+    color: white;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    display: inline-block;
   }
 
-  /* feedback brands logos and toggle-- start*/
 
+/* brands/carousel css start */
+
+#brands-parent-div{
+    box-sizing: border-box;
+    /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.slider{
+   min-height: 200px;
+  max-width: 660px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  border-radius: 6px;
+  margin: auto;
+  
+}
+
+.slides{
+  width: 500%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition-timing-function: ease-out;
+  transition: 1.5s;
+}
+
+ 
+ /*---carousel inner css---*/
+.carousel-cont{
+  padding: 24px;
+  border-radius: 6px;
+  min-height: 200px;
+  max-width: 648px;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-inner{
+  float: left;
+  width: 100%;
+}
+.item-top{
+  display: flex;
+  flex-direction: row;
+} 
+
+img{
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+}
+/* .item-top .img{
+  width: 64px;
+  height: 64px;
+} */
+.item-top .img img{
+    width: 64px;
+  height: 64px;
+    border-radius: 50%;
+}
+.item-top .desc{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.name h6{
+  display: inline;
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-weight: 600;
+  margin-bottom: .5rem;
+  margin-top: 0;
+}
+.item-content{
+  margin-top: 17px;
+  padding-right: 15px;
+  color: #484848;
+}
+.linkedin img{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 0;
+}
+
+
+/* brands */
+
+/* feedback brands logos and toggle-- start*/
+#brands-div{
+    margin: auto;
+}
   .brands {
     display: flex;
     margin: auto;
     padding: 10px 0px;
-    width: 648px;
-    height: 15%;
+    max-width: 648px;
+    height: 60px;
   }
   .brands > div {
     width: 20%;
@@ -393,29 +512,7 @@
 
   /* feedback brands logos and toggle-- end*/
 
-  .register {
-    width: 100vw;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 50px;
-  }
-  .register > button {
-    width: 215px;
-    padding: 12px;
-    font-size: 16px;
-    margin: auto;
-    background: #00A5EC;
-    border-radius: 3px;
-    border: 1px solid #00A5EC;
-    color: white;
-    font-weight: 600;
-    min-width: 80px;
-    line-height: 1.14285714;
-    display: inline-block;
-  }
+/* brands/carousel css start */
 
 
   /* ------------------------media queries --start-------------------- */
@@ -442,4 +539,17 @@
   {#rightSide{
       margin-bottom: 100px;}
     
+  }
+
+    @media (max-width:768px){
+    .midCont{
+      flex-direction: column;
+      align-items: center;
+    }
+    .midText{
+      height: 400px;
+      background-size: 150%;
+      background-position-y: 200px;
+      background-position-x: -80px;
+    }
   }
