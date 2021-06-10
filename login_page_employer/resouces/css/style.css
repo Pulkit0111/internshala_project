@@ -32,6 +32,8 @@
     margin-left: 0;
     border-bottom: 1px solid #EEE;
   }
+ 
+  
   .midText {
     width: 100%;
     background-image: url(../image/emp3.png);
@@ -39,6 +41,7 @@
     background-size: 100%;
     background-position-y: bottom;
   }
+ 
   .midText > p:nth-child(1) {
     margin-bottom: 0;
     margin-top: 48px;
@@ -63,16 +66,6 @@
 
   }
 
-  /* .checkBox{
-    display: flex;
-    font-size: 1.3vw;
-    font-weight: 580;
-    color: #3b3b3b;
-    margin-bottom: .3%;
-  }
-  .checkBox > img{
-    margin-right: .5%;
-  } */
   #rightSide{
     display: inline-block;
       width: 375px;
@@ -268,6 +261,13 @@
     width: 85%;
     margin: auto;
   }
+  @media (max-width: 992px){
+    .hireCardCont{
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+    }
+  }
   .hireCard {
     width: 33.3%;
     height: 100%;
@@ -428,7 +428,7 @@ img{
     display: flex;
     margin: auto;
     padding: 10px 0px;
-    width: 648px;
+    max-width: 648px;
     height: 60px;
   }
   .brands > div {
@@ -539,4 +539,17 @@ img{
   {#rightSide{
       margin-bottom: 100px;}
     
+  }
+
+    @media (max-width:768px){
+    .midCont{
+      flex-direction: column;
+      align-items: center;
+    }
+    .midText{
+      height: 400px;
+      background-size: 150%;
+      background-position-y: 200px;
+      background-position-x: -80px;
+    }
   }
