@@ -23,6 +23,7 @@ $(function() {
   $overlay.on('click', function(){
     $(this).removeClass('visible');
     $mainPopUp.removeClass('visible');
+    $cont.removeClass('Disble');
   });
   $('#popup-close-button a').on('click', function(e){
     e.preventDefault();

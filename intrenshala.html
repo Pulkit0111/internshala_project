@@ -13,32 +13,51 @@
     <link rel="stylesheet" href="./resouces/css/popup.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="cont">
 
-        <!--popup-->
-        <div class="overlay">
-        </div>
-            <div class="main-popup">
-            <div class="popup-header">
-            <div id="popup-close-button"><a href="#"></a></div>
-            <ul>
-                <li><a href="#" id="sign-in">Student</a></li>
-                <li><a href="#" id="register">Employer / T&P</a></li>
-            </ul>
-            </div><!--.popup-header-->
-            <div class="popup-content">
+       <!--popup-->
+       <div class="overlay">
+    </div>
+        <div class="main-popup">
+        <div class="popup-header">
+        <div id="popup-close-button"><a href="#"></a></div>
+        <ul>
+            <li><a href="#" id="sign-in">Student</a></li>
+            <li><a href="#" id="register">Employer / T&P</a></li>
+        </ul>
+        </div><!--.popup-header-->
+        <div class="popup-content">
 
-            <form action="#" class="sign-in">
-                <div class="googlebtn">  
-                    <button><img src="./resouces/image/google_logo.webp"/>Login with Google</button>
-                </div>
-                <div class="crossline">
-                    <hr class="he">
-                    <p>OR</p>
-                    <hr class="he">
-                </div>
+        <form action="#" class="sign-in">
+            <div class="googlebtn">  
+                <button><img src="./resouces/image/google_logo.webp"/>Login with Google</button>
+            </div>
+            <div class="crossline">
+                <hr class="he">
+                <p>OR</p>
+                <hr class="he">
+            </div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+            <label for="password">Password:</label>
+            <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+            <div class="link">
+            <a href="">Forgot Password?</a>
+            </div>
+            <input type="submit" id="submit" value="Login">
+            
+            <div class="btmclass">
+                <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+            </div>
+        </form>
+
+       
+        
+        <form action="#" class="register">
+           
                 <label for="email">Email:</label>
                 <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
                 <label for="password">Password:</label>
@@ -51,28 +70,11 @@
                 <div class="btmclass">
                     <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
                 </div>
-            </form>
+        </form>
+        </div><!--.popup-content-->
+    </div><!--.main-popup-->
+    <!--End popup-->
 
-           
-            
-            <form action="#" class="register">
-               
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
-                    <div class="link">
-                    <a href="">Forgot Password?</a>
-                    </div>
-                    <input type="submit" id="submit" value="Login">
-                    
-                    <div class="btmclass">
-                        <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
-                    </div>
-            </form>
-            </div><!--.popup-content-->
-        </div><!--.main-popup-->
-        <!--End popup-->
 
 
     <nav class="header">
