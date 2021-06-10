@@ -58,8 +58,10 @@
   }
 
   .header {
-    padding-right: 10%;
-    padding-left: 10%;
     width: 100%;
+  }
+
+  .header > .height-cont {
+    padding-left: 5%;
   }
 }
