@@ -18,6 +18,13 @@
   display: flex;
   flex-direction: column;
 }
+.footer > .row2 > .col4 {
+  display: flex;
+  width: 8%;
+  flex-direction: row;
+  margin-left: 0%;
+  justify-content: space-between;
+}
 .row1 > .col1,
 .col2,
 .col3,
