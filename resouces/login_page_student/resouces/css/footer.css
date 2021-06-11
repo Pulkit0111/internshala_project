@@ -1,97 +1,123 @@
-/* * {
-  margin: 0%;
-  padding: 0%;
-} */
-.cont > footer > .footerDiv {
-  /* width added by Pulkit */
-  width: 100%;
-  background-color: #333;
-  /* min height to 525 by Pulkit */
-  min-height: 525px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-
-.cont > footer > .footerDiv > .sizing {
+.footerDiv {
+  background-color: #333;
+  min-height: 460px;
+  padding: 2% 4.5% 0;
+}
+.sizing {
   padding-top: 20px;
   padding-right: 20px;
   padding-left: 20px;
+  
 }
 
-.cont > footer > .footerDiv > .sizing > .footerFlex {
+
+.footerFlex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   color: white;
 }
+@media (max-width: 991px){
+.footerFlex{
 
-.cont > footer > .footerDiv > .sizing > .footerFlex > div > .list {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#collasp-div{
+  display: none;
+}
+.footerFlex h5{
+  margin: 20px 50px;
+}
+.copyright{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+
+.list {
   color: white;
   margin-top: 10px;
   margin-bottom: 10px;
   font-family: "Inter var", sans-serif;
   color: #fff;
 }
-.cont > footer > .footerDiv > .sizing > .footerFlex > div > h5 {
-  font-size: 16px;
+.footerFlex > div > h5 {
+  /* font-size: 1.2vw; */
   line-height: 1.25;
   font-weight: 600;
   font-family: "Inter var", sans-serif;
 }
-
-.cont > footer > .footerDiv > .sizing > .footerFlex > div > .list > a {
+.list > a {
   color: white;
   text-decoration: none;
   font-weight: 400;
   color: #fff;
 }
-#hrLine {
-  margin-top: 20px;
-  width: 100%;
-  margin-bottom: 30px;
+#offer{
+  text-align: center;
+  width: 50px;
+  height: 22px;
+  background: #ff8c00;
+  border-radius: 5px;
+  /* font-size: .9vw; */
+  font-weight: 400;
+  /* margin-left: 0%; */
 }
+#offerSec{
+  display: flex;
+}
+ #offerSec > div:first-child{
+  /* font-size: 5vw; */
+  line-height: 1.25;
+  font-weight: 600;
+  font-family: "Inter var", sans-serif;
+} 
 
-.cont > footer > .footerDiv > .sizing > .copyright {
+.copyright {
   display: flex;
   justify-content: space-between;
   height: 100%;
   align-items: center;
   color: white;
+  background-color: #333;
+     padding-top: 24px;
+    padding-bottom: 40px;
+      border-top: 1px solid #666;
 }
 
-.cont > footer > .footerDiv > .sizing > .copyright > .media {
+.media {
   display: flex;
   justify-content: space-between;
-  /* width changed by Pulkit to reduce the gap between the icons */
-  width: 30%;
+  width: 40%;
   align-items: center;
 }
-
-.cont > footer > .footerDiv > .sizing > .copyright > .media > div > button {
+.media > div > button {
   height: 100%;
   height: 50px;
   width: 180px;
   background: transparent;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   color: white;
 }
 
 #playicon {
+  font-size: .9vw;
+  font-weight: 550;
   display: flex;
   align-items: center;
   justify-content: space-around;
   padding: 20px;
 }
-
-/* Added by Pulkit for CONTEST tag in footer */
-
-h5 > span {
-  background-color: #ff8c00;
-  color: white;
-  padding: 3px;
-  border-radius: 3px;
-  margin-top: 2px;
-  font-size: 14px;
-}
-#hrLine {
-  border: 1px solid #666666;
+.copy > div{
+  display: block;
 }

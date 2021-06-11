@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internships | Summer Intership 2021</title>
-    <link rel="icon" href="https://internshala.com//favicon.ico?v=5">
-    <link rel="stylesheet" href="./resouces/css/header.css">
-    <link rel="stylesheet" href="./resouces/css/footer.css">
+    <title>Internships | Summer Internship 2021</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="./resouces/css/style.css">
+    <link rel="stylesheet" href=".//resouces/css/header.css">
+    <link rel="stylesheet" href="./resouces/css/footer.css">
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="cont">
-    <nav class="header">
+    <!-- header section- start -->
+     <nav class="header">
         <div class="height-cont">
             <div class="flex">
                 <div class="imgflex"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg" />
@@ -39,45 +41,140 @@
             </div>
         </div>
     </nav>
-    <div class="midContainer">
-        <div class="imgContainer">
-            <img src="./resouces/images/mid_internshala.png">
+     <!-- header section- end -->
+
+     <!-- middle section- start -->
+
+    <main>
+        <div id="middle">
+            <div id="max-width-cont">
+                <div class="midCont">
+                    <!-- middle area, over the bg img text, for left side--start -->
+                <div class="midText">
+                    <p>A <span id="freeText">free</span> ride to your dream career</p>
+                    <p>Register and apply to 10000+ opportunities</p>
+                    <div id="checkbox-cont">
+                      <div class="checkBox"><img src="resouces\image\check_box.svg" alt=""> <p>Internships</p></div>
+                      <div class="checkBox"><img src="resouces\image\check_box.svg" alt=""><p>Fresher jobs</p></div>
+                      <div class="checkBox"><img src="resouces\image\check_box.svg" alt=""><p>Work from home jobs</p></div>
+                    </div>
+                </div>
+                <!-- middle area, over the bg img text, for left side--end -->
+
+                <!-- middle area, right side--start -->
+                <div id="rightSide">
+                    <div id="formCont">
+                        <!-- form --start -->
+                        <div class="form">
+                            <!-- form section 1 google button -->
+
+                            <div id="google-btn-cont">
+                              <div class="google-img-cont">
+                                <img src="./resouces/image/google_logo-min.png" alt="google">
+                              </div>
+                              <div class="google-content">Sign Up with Google</div>
+                            </div>
+                            <div class="or-cont">
+                              <div class="or"><p>OR</p></div>
+                              <div class="border"></div>
+                            </div>
+                            
+
+                            <!-- form section 1 -->
+                            <div class="form-group">
+                                <label for="email" class="control-label">Email</label>
+                                <div data-toggle="popover" data-content="<div class='email_popover_close'><i class='ic-24-cross'></i></div><div>An official id (example: <span style='color:#1295c9' class='email_example'>name@company_name.com</span>) is strongly recommended as it helps us verify that you represent the company and enables us to provide you a quick service. If you're a student, please register <a href='https://internshala.com/registration/student' tabindex='20000'>here</a>.</div>" id="email_desktop">
+                                    <input type="email" class="form-control email-field-employer-registration" id="email" name="email" placeholder="name@company_name.com">
+                                </div>
+                                <p id="span_note" style="margin-left:2px;">
+                                </p>
+                            </div>
+                            <!-- form section 2 -->
+                           <div class="form-group">
+                                <label for="password" class="control-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Minimum 6 characters">
+                            </div>
+                            <!-- form section 3 -->
+                           <div class="row">
+                                <div class="col" id="first_name_container">
+                                    <div class="form-group">
+                                        <label for="first_name" class="control-label">First Name</label>
+                                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Your First Name">
+                                    </div>
+                                </div>
+                                <div class="col" id="last_name_container">
+                                    <div class="form-group">
+                                        <label for="last_name" class="control-label">Last Name</label>
+                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Your Last Name">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- form section 4 -->
+                           <!-- <div class="form-group">
+                                <label for="phone_primary" class="control-label">Mobile Number</label>
+                                <div class="row" id="phone_container">
+                                    <div class="col col-3">
+                                        <input type="text" class="form-control country-code" id="country_code" name="country_code" value="+91">
+                                    </div>
+                                    <div class="col col-9">
+                                        <input type="number" class="form-control mobile-number" id="phone_primary" name="phone_primary" placeholder="10 digit mobile number">
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- form section 5-extras -->
+                            <div id="job_registration_form_extras" style="margin-top: 16px">
+                                <div class="label_toc">
+                                    <span style="color: #333333; line-height: 1.57; font-weight: 400">
+                                        By registering, you agree to our <a href="/terms#employer" target="_blank">Terms and Conditions</a>.
+                                    </span>
+                                </div>
+
+                                <div id="job_registration_button_container" style="display: none; margin-top: 16px;">
+                                    <div id="job_employer_registration_button">
+                                        <button type="submit" class="btn btn-primary">Post Job Now</button>
+                                    </div>
+                                    <div class="label_toc_2">
+                                        <div class="cta-below-2">
+                                            Already registered? <a data-toggle="modal" data-target="#login-modal">Login here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="internship_registration_button_container" style="display: block">
+                                    <div id="job_employer_registration_button">
+                                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    </div>
+                                    <div class="label_toc_2">
+                                        <a href="/employer/help_center_faq/16">
+                                          <p id="already-reg">Already registered? <span id="job_toc">Login</span></p>   
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- form section 5-extras-end -->
+                        </div>
+                        <!-- form --end -->
+                    </div>
+                </div>
+                <!-- middle area, right side--start -->
+                </div>
+            </div>
         </div>
-        <div class="form">
-            <a href=""><div class="googleBox">
-                <img src="./resouces/images/google_icon.png">
-                <p>Sign Up with Google</p>
-            </div></a>
-            <div class="crossline">
-                <hr class="he">
-                <p>OR</p>
-                <hr class="he">
-            </div>
-            <p>Email</p>
-            <input type="text" placeholder="john@example.com">
-            <p>Password</p>
-            <input type="text" placeholder="Must be atleast 6 characters">
-            <div class="name">
-                <div>First Name</div>
-                <div>Last Name</div>
-            </div>
-            <div class="nameInput">
-                <input type="text" placeholder="John">
-                <input type="text" placeholder="Doe">
-            </div>
-            <p>By signing up, you agree to our <span> <a href="">
-            Terms and Condtitions</span></a></p>
-            <button class="btnSignup">Sign Up</button>
-            <p><b>Already Registered?</b><span><a href="">Login</span></a></p>  
-        </div>
-    </div>
+        
+
+
+    </main>
+
+    <!-- middle section- end -->
+
+    <!-- footer section- start -->
+
     <footer>
         <div class="footerDiv">
             <div class="sizing">
                 <div class="footerFlex">
-                    <div>
+                    <div id="collasp-div">
+                        <h5>Internships by places</h5>
                         <div class="list">
-                            <h5>Internships by places</h5>
                             <a href="">Internship in India</a>
                         </div>
                         <div class="list">
@@ -105,7 +202,7 @@
                             <a href="">Virtual Internship</a>
                         </div>
                     </div>
-                    <div>
+                    <div id="collasp-div">
                         <h5>Internship by Stream</h5>
                         <div class="list">
                             <a href="">Computer Science Internship</a>
@@ -132,11 +229,11 @@
                             <a href="">Summer Research Fellowship</a>
                         </div>
                         <div class="list">
-                            <a href="">Campus Ambassador Program</a>
+                            <a href="">Camppus Ambassador Program</a>
                         </div>
                     </div>
-                    <div>
-                        <h5>Online Trainings <span>CONTEST</span></h5>
+                    <div id="collasp-div">
+                        <div id="offerSec"><div><h5>Online Trainings</h5></div> <div id="offer">OFFER</div></div> 
                         <div class="list">
                             <a href="">Web Development</a>
                         </div>
@@ -166,7 +263,7 @@
                         </div>
                     </div>
                     <div>
-                        <h5>About Internshala</h5>
+                        <h5 id="collasp-div">About Internshala</h5>
                         <div class="list">
                             <a href="">About us</a>
                         </div>
@@ -196,7 +293,9 @@
                         </div>
                     </div>
                 </div>
-                <hr id="hrLine">
+                </div>
+       
+                <!-- <hr id="hrLine"> -->
                 <div class="copyright">
                     <div class="media">
                         <div><button id="playicon"><i class="ic-24-playstore"></i>Get Android App</button></div>
@@ -210,10 +309,10 @@
                         <div>© Copyright 2021 Internshala</div>
                     </div>
                 </div>
-            </div>
-        </div>
+                 </div>
+            
     </footer>
+    <!-- footer section- end -->
 </div>
 </body>
 </html>
-<script src="./resouces/js/script.js"></script>
