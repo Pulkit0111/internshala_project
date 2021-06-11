@@ -78,12 +78,29 @@
     <!--End popup-->
 
 
+      <!--responsive Menu bar-->
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="resMenu">
+        <a href="#">Internships</a>
+        <a href="#">Online Trainings <span>CONTEST</span></a>
+        <a href="#">WFH Internships</a>
+        <a href="#">Fresher Jobs</a>
+        <a href="#">Contact Us</a>
+        <hr class="hrLine">
+        <a href="#">Register - As a Student</a>
+        <a href="#">Register - As an Employer</a>
+        <a href="#">Login</a>
+      </div>
+      </div>
+      <!--End responsive Bar-->
 
     <nav class="header">
         <div class="height-cont">
             <div class="flex">
                 <div class="imgflex">
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
                         <i class="fa fa-bars"></i>
                       </a>
                     <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/>
@@ -427,4 +444,19 @@
 <script type="text/javascript" src="./resouces/js/popup.js"></script>
 <script type="text/javascript" src="./resouces/js/post.js"></script>
 <script type="text/javascript" src="./resouces/js/counter.js"></script>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "80%";
+
+      document.querySelector(".cont").setAttribute('class',"cont Disble");
+      document.querySelector(".overlay").setAttribute('class',"overlay vis");
+      
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+      document.querySelector(".cont").setAttribute('class',"cont");
+      document.querySelector(".overlay").setAttribute('class',"overlay");
+    }
+    </script>
 </html>

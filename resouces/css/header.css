@@ -62,7 +62,8 @@
   color: #008bdc;
 }
 
-.header > .height-cont > .flex > .btn > div > a > .spanStyle {
+.header > .height-cont > .flex > .btn > div > a > .spanStyle,
+.sidenav > .resMenu > a > span {
   background-color: #ff8c00;
   color: white;
   padding: 5px;

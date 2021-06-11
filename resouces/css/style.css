@@ -562,3 +562,51 @@
 .hide {
   visibility: visible;
 }
+
+/*responsive header*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #484848;
+  display: block;
+  transition: 0.3s;
+  font-family: "Inter var", sans-serif;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.overlay.vis {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.sidenav > .resMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidenav > .resMenu > .hrLine {
+  border: 1px solid #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
