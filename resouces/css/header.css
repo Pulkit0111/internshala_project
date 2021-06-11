@@ -33,6 +33,8 @@
 
 .header > .height-cont > .flex > .imgflex > img {
   padding-bottom: 10px;
+  width: 60%;
+  height: 100%;
 }
 
 .header > .height-cont > .flex > .btn {
