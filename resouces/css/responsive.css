@@ -75,6 +75,10 @@
   .filter_button {
     display: block;
   }
+  .header > .height-cont > .flex > .imgflex > a > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
