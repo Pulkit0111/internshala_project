@@ -96,14 +96,9 @@ p {
   display: flex;
   justify-content: center;
 }
-.nav > button {
+.nav > img {
   width: 3.5%;
-  background-color: white;
-  border: 2px solid white;
   margin-left: 2%;
-}
-.nav > button > img {
-  width: 100%;
 }
 .box1,
 .box2,
