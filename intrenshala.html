@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./resouces/css/footer.css">
     <link rel="stylesheet" href="./resouces/css/banner.css">
     <link rel="stylesheet" href="./resouces/css/popup.css">
+    <link rel="stylesheet" href="./resouces/css/filter.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,8 +22,7 @@
     <div class="cont">
 
        <!--popup-->
-       <div class="overlay">
-    </div>
+       <div class="overlay"></div>
         <div class="main-popup">
         <div class="popup-header">
         <div id="popup-close-button"><a href="#"></a></div>
@@ -77,7 +77,134 @@
     </div><!--.main-popup-->
     <!--End popup-->
 
+    <!-- The Modal -->
+<div id="myModal" class="modal">
 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+       <!--left slider-->
+       <div class="LSliderresponsive" id="responsiveId">
+        <p><i id="filter_ui_icon_desktop" class="ic-24-filter-applied"></i> Filters</p>
+       <div class="gap">
+
+         <label>Category</label>
+         <input type="text" placeholder="e.g Marketing"/>
+
+         <label>Location</label>
+         <input type="text" placeholder="e.g Delhi (NCR)"/>
+       
+       </div>
+
+        <div class="check">
+            <div>
+                <p>work from home</p>
+            </div>
+             <div>
+               <label class="switch">
+                   <input type="checkbox">
+                   <span class="slide round"></span>
+                 </label>
+             </div>
+        </div>
+
+        <div class="check">
+           <div>
+               <p>Part-time</p>
+           </div>
+            <div>
+              <label class="switch">
+                  <input type="checkbox">
+                  <span class="slide round"></span>
+                </label>
+            </div>
+       </div>
+
+       <div class="range">
+           <div class="content">
+               <p>Desired minimum monthly stipend (₹)</p>
+           </div>
+            <div class="prang">
+               <input type="range" name="vol" min="0" max="12100" value="0">
+               <div class="rate">
+                   <p>0</p>
+                   <p>2k</p>
+                   <p>4k</p>
+                   <p>6k</p>
+                   <p>8k</p>
+                   <p>10k</p>
+               </div>
+           </div>
+       </div>
+
+
+       <div class="gap">
+
+           <label>Starting from (or after)</label>
+           <input type="text" placeholder="Choose date"/>
+ 
+           <label>Max. duration (months)</label>
+           <input type="text" placeholder="Choose duration"/>
+         
+     </div>
+
+
+     <div class="check">
+       <div>
+           <p>
+               Internships for women <a href="#" data-toggle="tooltip" data-placement="top" title="Will show internships which are also open to women (re)starting their careers"><i class="open_popover ic-16-help-circle" popover_content="Will show internships which will offer a full-time job to the intern at the end of internship depending on performance" data-original-title="" title=""></i></a></p>
+       </div>
+        <div>
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slide round"></span>
+            </label>
+        </div>
+   </div>
+
+   <div class="check">
+       <div>
+           <p>Internships with job offer <a href="#" data-toggle="tooltip" data-placement="top" title="Will show internships which will offer a full-time job to the intern at the end of internship depending on performance"><i class="open_popover ic-16-help-circle" popover_content="Will show internships which will offer a full-time job to the intern at the end of internship depending "></i></a></p>
+       </div>
+        <div>
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slide round"></span>
+            </label>
+        </div>
+   </div>
+
+       <div class="clear">
+        <a href="">Clear all</a>
+       </div>
+
+      <div class="line">
+         <hr style="width:50%">
+         <p>OR</p>
+         <hr style="width:50%">
+      </div>
+
+
+      <div class="filterSearch">
+          <p>Search</p>
+          <div class="flex">
+       <input type="text" placeholder="e.g. MBA, Design, Mumbai">
+       <span class="searchBtn">
+           <button type="button">
+               <i class="icon_search ic-24-search"></i>
+           </button>
+       </span>
+   </div>
+       </div>
+
+       </div>
+       <!--end left slider-->
+
+    </div>
+  
+  </div>
+
+  
       <!--responsive Menu bar-->
       
       <div id="mySidenav" class="sidenav">
@@ -126,6 +253,10 @@
         </div>
     </nav>
     <main>
+        <div class="filter_button">
+            <button id="myBtn"><i class="ic-16-filter" style="color: #00A5EC;"></i> <span>Filters</span></button>
+        </div>
+       
         <div class="title">
            <h4><span id="postcount">0</span> total internships <i id="content_open_button" class="ic-16-chevron-down"></i></h4>
         </div>
@@ -444,19 +575,5 @@
 <script type="text/javascript" src="./resouces/js/popup.js"></script>
 <script type="text/javascript" src="./resouces/js/post.js"></script>
 <script type="text/javascript" src="./resouces/js/counter.js"></script>
-<script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "80%";
-
-      document.querySelector(".cont").setAttribute('class',"cont Disble");
-      document.querySelector(".overlay").setAttribute('class',"overlay vis");
-      
-    }
-    
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.querySelector(".cont").setAttribute('class',"cont");
-      document.querySelector(".overlay").setAttribute('class',"overlay");
-    }
-    </script>
+<script type="text/javascript" src="./resouces/js/filter.js"></script>
 </html>

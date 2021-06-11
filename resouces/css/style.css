@@ -191,7 +191,8 @@
   margin-bottom: 40px;
 }
 
-.LSlider {
+.LSlider,
+.LSliderresponsive {
   border: 1px solid #eee;
   width: 35%;
   height: 600px;
@@ -609,4 +610,159 @@
   border: 1px solid #e4e4e4;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+/*responsive filter*/
+.LSliderresponsive {
+  border: 1px solid #eee;
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.LSliderresponsive > p {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.LSliderresponsive > .gap {
+  width: 90%;
+  margin: auto;
+}
+
+.LSliderresponsive > .clear {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+.LSliderresponsive > .line {
+  display: flex;
+  height: 0px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  column-gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #8a8a8a;
+  font-weight: 700;
+}
+
+.LSliderresponsive > .filterSearch {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.LSliderresponsive > .filterSearch > p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+.LSliderresponsive > .filterSearch > .flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.LSliderresponsive > .filterSearch > .flex > input {
+  height: 45px;
+  width: 75%;
+  padding-left: 20px;
+  font-size: 12px;
+  outline: none;
+  border: 1px solid gray;
+  border-right: none;
+}
+
+.LSliderresponsive > .filterSearch > .flex > .searchBtn {
+  flex: 1;
+  background-color: #00a5ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: none;
+  border-top-right-radius: 5px;
+  border-end-end-radius: 5px;
+}
+
+.LSliderresponsive > .filterSearch > .flex > .searchBtn > button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.LSliderresponsive > .check {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.LSliderresponsive > .range {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.LSliderresponsive > .range > .prang > input {
+  width: 95%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.LSliderresponsive > .range > .prang > .rate {
+  display: flex;
+  column-gap: 10%;
+}
+
+.LSliderresponsive > .gap > label {
+  font-family: "Inter var", sans-serif;
+}
+
+.LSliderresponsive > .gap > input {
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Inter var", sans-serif;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.LSliderresponsive > .gap > input:hover {
+  border: 1px solid #1dc1f6;
+}
+
+/*filter button*/
+.filter_button {
+  text-align: center;
+  margin-top: 10%;
+  display: none;
+}
+
+.filter_button > button {
+  background-color: transparent;
+  padding: 1%;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+}
+
+.filter_button > button > span {
+  font-weight: 700;
 }
