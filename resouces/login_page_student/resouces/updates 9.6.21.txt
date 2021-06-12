@@ -1,9 +1,0 @@
-1.made the page nearly as similar as possible2.
-2.changed bg img and illustrations as per the original website
-3.recreated the form, now it's fully responsive and maintaining it's size and gaps.
-4.applied some media queries (for different size laptops),made it responsive, now making it fully responsive(for mobiles and tabs) won't be difficult.
-5.for feedback/testimonial carousel section, applied brand logos, now we can toggle them to change color(having some troubles with slider/carousel hence didn't implemented it yet, will do that later)
-6. made some little changes to the header, and some changes to footer too, now it's nearly similar and responding to resizing
-
-
-note- still having that bottom slider issue, i checked everything but don't know why its happening, it's not affecting much but will have to resolve.

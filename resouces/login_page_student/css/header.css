@@ -1,3 +1,7 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
 .header {
   height: 72px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
@@ -71,20 +75,19 @@
   padding: 9px 20px 9px 20px;
   font-weight: bold;
 }
-/* No need of drop down menu here in employer page */
 
-/* .header > .height-cont > .flex > .btn > .dropdown > div > .btnRegister {
+.header > .height-cont > .flex > .btn > .dropdown > div > .btnRegister {
   /* bg color changed to white as pwr requirement in login page */
-/* background-color: white;
-  border: none; */
-/* border changed to white as pwr requirement in login page */
-/* border: 1px solid white;
-  border-radius: 4px; */
-/* border changed to white as pwr requirement in login page */
-/* color: #525050;
-  padding: 5px 20px 5px 20px; */
-/* font-weight: bold; */
-/* } */
+  background-color: white;
+  border: none;
+  /* border changed to white as pwr requirement in login page */
+  border: 1px solid white;
+  border-radius: 4px;
+  /* border changed to white as pwr requirement in login page */
+  color: #525050;
+  padding: 5px 20px 5px 20px;
+  font-weight: bold;
+}
 
 .header > .height-cont > .flex > .btn > .dropdown:hover {
   border-bottom: 10px solid #008bdc;
@@ -104,9 +107,9 @@
   right: 0;
   left: auto;
   /* margin decreased by pulkit for drop down box to change the width of blue line behind the drop down*/
-  margin-top: 13%;
+  margin-top: 10%;
   /* min-width changed by pulkit for drop down box */
-  min-width: 180px;
+  min-width: 250px;
   z-index: 1;
 }
 

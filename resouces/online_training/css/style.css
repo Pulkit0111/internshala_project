@@ -116,6 +116,11 @@ p {
   border-radius: 10px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-top: 4%;
-  margin-left: 4%;
   margin-bottom: 6%;
+}
+.specialCont > img:nth-child(1) {
+  margin-right: 2%;
+}
+.specialCont > img:nth-child(2) {
+  margin-left: 2%;
 }
