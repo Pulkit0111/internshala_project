@@ -1,0 +1,215 @@
+/* new responsive header end */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #333;
+    font-family: Inter,sans-serif;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.57142857;
+    font-weight: 400;
+}
+#header{
+    height: 72px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+    margin-bottom: 2px;
+}
+.header-cont{
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    margin: auto;
+}
+.header-max{
+    height: 100%;
+    max-width: 1224px;
+    margin: auto;
+}
+.navbar{
+    padding: 0;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media(min-width: 768px){
+    .navbar{
+        flex-flow: row nowrap;
+    }
+}
+.logo-cont{
+    display: flex;
+    height: 100%;
+}
+#hamburger-menu{
+    margin-right: 16px;
+    border-style: none;
+    vertical-align: middle;
+    display: inline;
+    width: 25px;
+}
+.main-logo{
+    padding-top: 0;
+    padding-bottom: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.main-logo a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #008BDC;
+    cursor: pointer;
+    background-color: transparent;
+    text-decoration: none;
+}
+.main-logo img{
+    width: 112px;
+    vertical-align: middle;
+    border-style: none;
+}
+.collapse-nav{
+    height: 100%;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.navbar-nav{
+    height: 100%;
+    font-style: normal;
+    font-weight: 600;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.navbar-nav ul{
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.navbar-nav li a{
+    position: relative;
+    color: #484848;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.nav-item{
+    display: flex;
+    align-items: center;
+}
+.item-register{
+    border-bottom: 2px solid transparent;
+}
+.nav-link{
+    padding-left: 16px;
+    padding-right: 16px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.nav-link .contest{
+    background-color: #FF8C00;
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    letter-spacing: .5px;
+    height: 35%;
+}
+.homepage-login-btn{
+    height: 50%;
+    background: #fff;
+    border: 1px solid #008BDC;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #008BDC;
+    margin: 0 16px;
+    padding: 7px 15px;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    font-size: 14px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.register-btn{
+    height: 32px;
+    margin-top: 2px;
+    padding: 4px 16px;
+    background: #00A5EC;
+    border-radius: 3px;
+    border: 1px solid #00A5EC;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.nav-link:hover{
+    color: #00a5ec;
+}
+
+
+
+@media(max-width: 992px){
+    .collapse-nav{
+        display: none
+    }
+    #hamburger-menu{
+        display: flex;
+    }
+}
+
+    @media(min-width:768px){
+    
+    .navbar-nav{
+        flex-direction: row;
+    }
+}
+    @media(min-width:992px){
+    .collapse-nav{
+        display: flex!important;
+        flex-basis: auto;
+    }
+    #item-register{
+        display: none;
+    }
+    #hamburger-menu{
+        display: none;
+    }
+}
+@media (max-width: 992px){
+#item-register {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+}}
+
+/* new responsive header end */
