@@ -141,7 +141,7 @@
                                 </div>
                                 <div id="internship_registration_button_container" style="display: block">
                                     <div id="job_employer_registration_button">
-                                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                                        <button onclick="studentSignup()" type="submit" class="btn btn-primary">Sign Up</button>
                                     </div>
                                     <div class="label_toc_2">
                                         <a href="/employer/help_center_faq/16">
@@ -316,3 +316,44 @@
 </div>
 </body>
 </html>
+<script>
+    function studentSignup() {
+   // e.preventDefault()
+    
+    let email = document.getElementById('email').value
+
+    let password = document.getElementById('password').value
+
+    let firstName = document.getElementById('first_name').value
+
+    let lastName = document.getElementById('last_name').value
+
+    let studentSignupObj = {
+        email,
+        password,
+        firstName,
+        lastName,
+    }
+
+    /*show error if any field is empty*/
+
+    if (email == '' || password == '' || firstName == '' || lastName == '') {
+        alert("please fill all the fields")
+    }
+
+    let arr;
+
+    arr = localStorage.getItem('students')
+
+    if(arr==null){
+        arr=[]  //for first time users
+    }
+    else{
+        arr = JSON.parse(localStorage.getItem('students'))
+    }
+
+    arr.push(studentSignupObj)
+
+    localStorage.setItem('students', JSON.stringify(arr))
+}
+</script>
