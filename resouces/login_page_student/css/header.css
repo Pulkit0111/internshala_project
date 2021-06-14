@@ -109,7 +109,7 @@
   /* margin decreased by pulkit for drop down box to change the width of blue line behind the drop down*/
   margin-top: 10%;
   /* min-width changed by pulkit for drop down box */
-  min-width: 250px;
+  min-width: 210px;
   z-index: 1;
 }
 

@@ -106,7 +106,7 @@
       background: #fff;
       display: block;
   }
-  .form-group{
+  .formItem{
     clear: both;
     margin-bottom: 16px;
   }
@@ -162,6 +162,12 @@
     border-top: 1px solid #EEE!important;
     border: 1px solid #dee2e6!important;
   }
+
+  /* error-message */
+  #error-password, #error-email, #error-name{
+    color: #e0343df8;
+  }
+
   label {
       font-family: Inter,sans-serif;
       font-weight: 500;
@@ -180,7 +186,7 @@
       margin-inline-start: 0px;
       margin-inline-end: 0px;
   }
-  .form-control{
+  .formControl{
   box-shadow: none;
   padding: 11px;
   background: #fff;
@@ -218,35 +224,26 @@
   border-image: initial;
   border-radius: 3px !important;
   }
-  .row{
+  .nameSecCont{
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
   }
-  .form .row .col:first-of-type {
+  .form .nameSecCont .nameSec:first-of-type {
       padding-left: 15px;
       padding-right: 3px;
   }
-  .form .row .col:last-of-type {
+  .form .nameSecCont .nameSec:last-of-type {
       padding-left: 3px;
       padding-right: 15px;
   }
-  .col{
+  .nameSec{
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
-  .col-3 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
-  .col-9 {
-      -ms-flex: 0 0 75%;
-      flex: 0 0 75%;
-      max-width: 75%;
-  }
+
   .label_toc {
       font-size: 12px;
       color: #333333;
@@ -260,23 +257,15 @@
   button, input, optgroup, select, textarea {
     margin: 0;
   }
-  .restricted_keyword_error {
-      font-size: 12px;
-      color: #E5330E;
-      margin-top: -8px;
-      margin-bottom: 16px;
-      padding: 0 16px;
-      font-family: Inter,sans-serif;
-      font-weight: 500;
-  }
-  #internship_registration_button_container{
+
+  #student-signup-btn-cont{
     display: block;
   }
-  #job_employer_registration_button {
+  #student-signup-btn {
       text-align: center;
       margin: 12px 0 16px;
   }
-  .btn.btn-primary {
+  .btn.btnSignup {
     width: 100%;
       padding: 12px 16px;
       background: #00A5EC;
@@ -290,7 +279,7 @@
       line-height: 1.14285714;
       font-size: 14px;
   }
-  .btn-primary {
+  .btnSignup {
       color: #fff;
       background-color: #007bff;
       border-color: #007bff;
@@ -300,7 +289,7 @@
       margin: 0;
       font-family: inherit;
   }
-  #job_registration_form_extras .label_toc_2 {
+  #formExtras .labelExtra {
       text-align: center;
   }
    #already-reg{
@@ -310,60 +299,6 @@
     color: #007bff;
   }
  
-  .hiring {
-  width: 100vw;
-  text-align: center;
-
-  }
-  .heading > p {
-      text-align: center;
-      font-weight: 600;
-      font-size: 28px;
-      line-height: 36px;
-      padding: 40px 0px;
-  }
-  .hireCardCont {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    height: 82%;
-    width: 85%;
-    margin: auto;
-  }
-  @media (max-width: 992px){
-    .hireCardCont{
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-    }
-  }
-  .hireCard {
-    width: 33.3%;
-    height: 100%;
-  }
-  .hireCard > img {
-    width: 152px;
-    margin-bottom: 16px;
-  }
-  .hireCard > p:nth-child(2) {
-    font-size: 18px;
-    line-height: 1.33333333;
-    font-weight: 600;
-    color: #333333;
-    margin-bottom: .5rem;
-  }
-  .hireCard > p:nth-child(3) {
-    font-size: 16px;
-    font-weight: 400;
-    color: #333333;
-  }
-  .company {
-    width: 100vw;
-    margin-top: 3%;
-  }
-
-  /* feedback brands logos and toggle-- end*/
 
   .register {
     width: 100vw;
@@ -390,199 +325,6 @@
   }
 
 
-/* brands/carousel css start */
-
-#brands-parent-div{
-    box-sizing: border-box;
-    /* display: flex; */
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-}
-
-.slider{
-   min-height: 200px;
-  max-width: 660px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
-  border-radius: 6px;
-  margin: auto;
-  
-}
-
-.slides{
-  width: 500%;
-  height: 100%;
-  display: flex;
-}
-
-.slides input{
-  display: none;
-}
-
-.slide{
-  width: 20%;
-  transition-timing-function: ease-out;
-  transition: 1.5s;
-}
-
- 
- /*---carousel inner css---*/
-.carousel-cont{
-  padding: 24px;
-  border-radius: 6px;
-  min-height: 200px;
-  max-width: 648px;
-  margin: auto;
-  width: 100%;
-  overflow: hidden;
-}
-.carousel-inner{
-  float: left;
-  width: 100%;
-}
-.item-top{
-  display: flex;
-  flex-direction: row;
-} 
-
-img{
-  vertical-align: middle;
-  border-style: none;
-  width: 100%;
-}
-/* .item-top .img{
-  width: 64px;
-  height: 64px;
-} */
-.item-top .img img{
-    width: 64px;
-  height: 64px;
-    border-radius: 50%;
-}
-.item-top .desc{
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.name h6{
-  display: inline;
-  font-size: 14px;
-  line-height: 1.42857143;
-  font-weight: 600;
-  margin-bottom: .5rem;
-  margin-top: 0;
-}
-.item-content{
-  margin-top: 17px;
-  padding-right: 15px;
-  color: #484848;
-}
-.linkedin img{
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  margin-left: 0;
-}
-
-
-/* brands */
-
-/* feedback brands logos and toggle-- start*/
-#brands-div{
-    margin: auto;
-}
-  .brands {
-    display: flex;
-    margin: auto;
-    padding: 10px 0px;
-    max-width: 648px;
-    height: 60px;
-  }
-  .brands > div {
-    width: 20%;
-    height: 100%;
-  }
-  .brand-logo{
-        text-indent: -999px;
-      cursor: pointer;
-      background-color: #fff;
-      background-clip: padding-box;
-      border-top: 10px solid transparent;
-      border-bottom: 10px solid transparent;
-      transition:  .6s ease;
-      width: 120px;
-      height: 48px;
-  }
-  .kotak-off{
-    
-    background: url('../image/kotak-off.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-  }
-  .disney-off{
-    background: url('../image/disney-off.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .airbnb-off{
-    background: url('../image/airbnb-off.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .teach-off{
-    background: url('../image/teach-off.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .arc-off{
-    background: url('../image/arc-off.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-
-  /* on */
-
-  .kotak-on{
-    
-    background: url('../image/kotak-on.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-  }
-  .disney-on{
-    background: url('../image/disney-on.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .airbnb-on{
-    background: url('../image/airbnb-on.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .teach-on{
-    background: url('../image/teach-on.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-  .arc-on{
-    background: url('../image/arc-on.png') no-repeat;
-    background-size: 90%;
-    background-position: center;
-
-  }
-
-  /* feedback brands logos and toggle-- end*/
-
-/* brands/carousel css start */
 
 
   /* ------------------------media queries --start-------------------- */
@@ -623,3 +365,134 @@ img{
       background-position-x: -80px;
     }
   }
+ @media (max-width: 992px)
+  {
+    #max-width-cont{
+      background-position-x: 000px;
+    background-position-y:top;
+    background-size: 140%;
+  }
+}
+
+
+
+
+ /* modal-sucess-css-start */
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+  padding: 0;
+  width: 100%;
+}
+
+.modalLeft {
+    min-width: 120px;
+    max-width: 120px;
+    height: auto;
+    background-image: url("../image/modal_success_background.svg");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    border-radius: 6px 0 0 6px;
+    display: flex;
+    justify-content: center;
+}
+.modalLeft img{
+  vertical-align: middle;
+    border-style: none;
+    width: 48px;
+}
+
+.modalRight {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 32px 32px 32px 24px;
+}
+.message{
+  color: #484848;
+  font-size: 14px;
+  line-height: 1.57142857;
+  font-weight: 400;
+  text-align: left;
+}
+.closeBtnCont{
+  margin-top: 8px;
+  text-align: right;
+}
+.closebtn{
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 16px;
+  margin-top: 16px;
+  background: #00A5EC;
+  border-radius: 3px;
+  border: 1px solid #00A5EC;
+  padding: 7px 15px;
+  font-weight: 600;
+  min-width: 80px;
+  line-height: 1.14285714;
+  font-size: 14px;
+  text-align: center;
+  float: right;
+}
+.closebtn:hover{
+  background-color: #007bff;
+}
+/* 
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .4);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+} */
+
+.bg-modal {
+  position: fixed;
+  transition: 200ms ease-in-out;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+  pointer-events: none;
+}
+
+.modal-contents {
+	background-color: white;
+	text-align: center;
+	/* padding: 20px; */
+	position: relative;
+	border-radius: 6px;
+  display: flex;
+  border: 1px solid black;
+  box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
+  border: none;
+  font-family: sans-serif;
+  max-width: 648px; 
+  transition: 600ms ease-in-out;
+  pointer-events:fill;
+  z-index: 10;
+}
+
+
+  /* modal-sucess-css-end */
+
+
+

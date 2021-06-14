@@ -8,6 +8,7 @@
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="./resouces/login_page_employer/css/style.css">
     <link rel="stylesheet" href="./resouces/login_page_employer/css/header.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/popup.css">
     <link rel="stylesheet" href="./resouces/login_page_employer/css/footer.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
@@ -18,17 +19,49 @@
      <nav class="header">
         <div class="height-cont">
             <div class="navFlex">
-                <div class="imgflex"><a href="./index.html"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></a></div>
+                <div class="imgflex"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></div>
                 <div class="btn">
-                    <div><a href="">Post Internship</a></div>
-                    <div><a href="">Post Fresher Job<span class="spanStyle">NEW</span></a></div>
+                    <div><a href="./newpost.html">Post Internship</a></div>
+                    <div><a href="./newpost.html">Post Fresher Job<span class="spanStyle">NEW</span></a></div>
                     <div><a href="./training.html" target="_blank">Online Trainings</a></div>
-                    <div><button class="btnLogin">Login</button></div>
+                    <div><button class="btnLogin" id="loginBtn">Login</button></div>
                 </div> 
             </div>
         </div>
      </nav>
      <!-- header section- start -->
+
+      <!--popup-->
+      <div class="overlay">
+      </div>
+          <div class="main-popup">
+           
+              <div id="popup-close-button"><a href="#"></a></div>
+             
+          <div class="popup-content" id="main">
+          <form class="sign-in" style="padding-top: 8%;" id="emplogin">
+              <div>
+                <label for="email">Email:</label>
+                <input type="text" id="log_email" placeholder="john@example.com" autocomplete="off">
+            </div>
+            <div>
+              <label for="password">Password:</label>
+              <input type="password" id="log_password" autocomplete="off" placeholder="Must be atleast 6 characters">
+            </div>
+              <div class="link">
+              <a href="">Forgot Password?</a>
+              </div>
+            <div>
+              <input type="button" id="submit" value="Login">
+            </div>
+              <div class="btmclass">
+                  <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
+              </div>
+            </form>
+          </div><!--.popup-content-->
+      </div><!--.main-popup-->
+      <!--End popup-->
+
 
      <!-- middle section- start -->
 
@@ -48,7 +81,7 @@
                 <div id="rightSide">
                     <div id="formCont">
                         <!-- form --start -->
-                        <div class="form">
+                        <div class="form" id="emp_form">
                             <!-- form section 1 -->
                             <div class="form-group">
                                 <label for="email" class="control-label">Official Email Id </label>
@@ -83,10 +116,10 @@
                                 <label for="phone_primary" class="control-label">Mobile Number</label>
                                 <div class="row" id="phone_container">
                                     <div class="col col-3">
-                                        <input type="text" class="form-control country-code" id="country_code" name="country_code" value="+91">
+                                        <input type="text" disabled="disabled" class="form-control country-code" id="country_code" name="country_code" value="+91">
                                     </div>
                                     <div class="col col-9">
-                                        <input type="number" class="form-control mobile-number" id="phone_primary" name="phone_primary" placeholder="10 digit mobile number">
+                                        <input type="tel" class="form-control mobile-number" id="phone_primary" minlength="10" maxlength="10" name="phone_primary" placeholder="10 digit mobile number">
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +143,7 @@
                                 </div>
                                 <div id="internship_registration_button_container" style="display: block">
                                     <div id="job_employer_registration_button">
-                                        <button type="submit" class="btn btn-primary">Register Now</button>
+                                        <button type="submit" class="btn btn-primary" id="emp_res">Register Now</button>
                                     </div>
                                     <div class="label_toc_2">
                                         <a href="/employer/help_center_faq/16">
@@ -365,6 +398,7 @@
     <!-- footer section- end -->
 </div>
 </body>
+<script type="text/javascript" src="./resouces/landing_page/js/popup.js"></script>
 </html>
 <script>
 /*script for toggeling brand logo color - start*/
@@ -392,6 +426,7 @@
 
 // sliding code - starts
     let first = document.querySelector('.first')
+
     kotak.addEventListener('click', function(){
         first.style.marginLeft='0'
     })
@@ -410,4 +445,322 @@
 
 // sliding code - ends
 
+</script>
+
+<script>
+  var arr = JSON.parse(localStorage.getItem('emplogin'));
+  var empButton = document.getElementById("emp_res");
+  empButton.addEventListener('click',addFunction);
+
+  function addFunction()
+  {
+    
+    
+    var empForm = document.getElementById("emp_form");
+    var email = empForm.querySelector('input[id="email"]');
+    var Password = empForm.querySelector('input[id="Password"]');
+    var first_name = empForm.querySelector('input[id="first_name"]');
+    var last_name = empForm.querySelector('input[id="last_name"]');
+    var phone_primary = empForm.querySelector('input[id="phone_primary"]');
+    function checkEmail(email)
+    {
+      if(arr)
+      {
+
+        for(var i=0;i<arr.length;i++)
+        {
+
+            if(arr[i].email == email)
+            {
+              return true;
+            }
+            
+        }
+        return false;
+      }
+      return false;
+            
+    }
+
+    function checkmobile(mobile)
+    {
+      if(arr)
+      {
+
+        for(var i=0;i<arr.length;i++)
+        {
+
+            if(arr[i].phone_primary == mobile)
+            {
+              return true;
+            }
+            
+        }
+        return false;
+      }
+      return false;
+            
+    }
+
+    var sm = empForm.querySelectorAll('input');
+    var value = true;
+    sm.forEach(function(el)
+    {
+      var nu = el;
+      ssp = document.getElementById(nu.id);
+      var parent =ssp.parentElement;
+      var p = document.createElement('p');
+      if(ssp.value == "")
+        {
+          ssp.style.border="1px solid red";
+          p.setAttribute('class','help-block');
+          var sn = parent.querySelector('p');
+          if(sn == null)
+          {
+            
+            p.innerText="This fiels is requirded";
+            p.style.color="red";
+            p.style.marginTop="10px";
+            p.style.fontSize="12px";
+            parent.append(p);
+            
+            
+          }
+          value = false;
+          
+        }
+        else if(checkEmail(email.value) && nu.name == "email")
+        {
+            
+                var emp = ssp.parentElement.querySelector('p');
+                if(emp)
+                {
+                  emp.remove();
+                }
+                ssp.style.border="1px solid red";
+                p.innerText="Email Alraedy Taken";
+                p.style.color="red";
+                p.setAttribute('class','help-block');
+                p.style.marginTop="10px";
+                p.style.fontSize="12px";
+                parent.append(p);
+                value = false;
+               
+             
+        }
+        else if(checkmobile(phone_primary.value) && nu.name == "phone_primary")
+        {
+            
+                var emp = ssp.parentElement.querySelector('p');
+                if(emp)
+                {
+                  emp.remove();
+                }
+                ssp.style.border="1px solid red";
+                p.innerText="Phone No. Alraedy Taken";
+                p.style.color="red";
+                p.setAttribute('class','help-block');
+                p.style.marginTop="10px";
+                p.style.fontSize="12px";
+                parent.append(p);
+                value = false;
+               
+             
+        }
+        else
+        {
+                var emp = ssp.parentElement.querySelector('p');
+                if(emp)
+                {
+                  emp.remove();
+                }
+                ssp.style.border="1px solid green";   
+                
+        }
+
+
+    });
+
+    if(value)
+    {
+
+       var empDeatails = 
+       {
+          email:email.value,
+          Password:password.value,
+          name : first_name.value+" "+last_name.value,
+          phone_primary:phone_primary.value
+       }
+       
+       let arr;
+       arr = localStorage.getItem('emplogin');
+       if(arr == null)
+       {
+          arr = [];
+       }
+       else
+       {
+          arr = JSON.parse(arr);
+       }
+
+       arr.push(empDeatails);
+       localStorage.setItem('emplogin',JSON.stringify(arr));
+              
+       var main = document.getElementById("main");
+       let p = document.createElement('p');
+       p.style.textAlign="center";
+       p.style.paddingTop="20px";
+       p.style.color="green";
+       p.innerHTML="<b>You have successfully Registered :)</b>";
+       main.insertBefore(p,main.childNodes[0]);
+      
+       setTimeout(function() {
+        main.querySelector('p').remove();
+       }, 5000)
+       
+       setTimeout(function() {
+        document.getElementById("loginBtn").click();
+       }, 2000);
+
+       email.value="";
+       password.value="";
+       first_name.value="";
+       last_name.value="";
+       phone_primary.value=""
+
+       
+     
+
+    }
+  }
+
+
+</script>
+
+
+<script>
+  var arr1 = JSON.parse(localStorage.getItem('emplogin'));
+  var empButton = document.getElementById("submit");
+  empButton.addEventListener('click',addFunction2);
+
+  function addFunction2()
+  {
+    
+    var empForm2 = document.getElementById("emplogin");
+    var email = empForm2.querySelector('input[id="log_email"]');
+    var password = empForm2.querySelector('input[id="log_password"]');
+    
+    
+    
+    var sm = empForm2.querySelectorAll('input');
+    var value = true;
+    sm.forEach(function(el)
+    {
+      var nu = el;
+
+      ssp = document.getElementById(nu.id);
+      var parent =ssp.parentElement;
+      var p = document.createElement('p');
+      if(ssp.value == "")
+        {
+          ssp.style.border="1px solid red";
+          p.setAttribute('class','help-block');
+          var sn = parent.querySelector('p');
+          if(sn == null)
+          {
+            
+            p.innerText="This fiels is requirded";
+            p.style.color="red";
+            p.style.marginLeft="13px";
+            p.style.fontSize="12px";
+            parent.append(p);
+            
+            
+          }
+          value = false;
+          
+        }
+        else
+        {
+                var emp = ssp.parentElement.querySelector('p');
+                if(emp)
+                {
+                  emp.remove();
+                }
+                ssp.style.border="1px solid green";   
+                
+        }
+
+
+    });
+
+    if(value)
+    {
+       var isValidate = false;
+        var num = arr1.forEach(function(va)
+        {
+             if(va.email == email.value && va.Password == password.value)
+             {
+                isValidate = true;
+                localStorage.setItem('login',JSON.stringify({email:email.value,name:va.name}))
+                setTimeout(function () {
+                  window.location.href="../../newpost.html";
+                }, 2000);
+                
+              }
+              
+        });
+        var main = document.getElementById("main");
+        let p = document.createElement('p');
+        if(isValidate)
+        {
+          p.style.textAlign="center";
+          p.style.paddingTop="20px";
+          p.style.color="green";
+          p.innerHTML="<b>You have successfully Login :)</b>";
+        }
+        else
+        {
+          p.style.textAlign="center";
+          p.style.paddingTop="20px";
+          p.style.color="red";
+          p.innerHTML="<b>Invalid Credentials (:</b>"; 
+        }
+       main.insertBefore(p,main.childNodes[0]);
+      
+       setTimeout(function() {
+        main.querySelector('p').remove();
+       }, 5000);
+      //  var empDeatails = 
+      //  {
+      //     email:email.value,
+      //     Password:password.value,
+      //     name : first_name.value+" "+last_name.value,
+      //     phone_primary:phone_primary.value
+      //  }
+
+      //   console.log(empDeatails);
+       
+      //  let arr;
+      //  arr = localStorage.getItem('emplogin');
+      //  if(arr == null)
+      //  {
+      //     arr = [];
+      //  }
+      //  else
+      //  {
+      //     arr = JSON.parse(arr);
+      //  }
+
+      //  arr.push(empDeatails);
+      //  localStorage.setItem('emplogin',JSON.stringify(arr));
+       
+      //  email.value="";
+      //  password.value="";
+
+       
+     
+
+    }
+  }
 </script>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships | Summer Internship 2021</title>
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+    <link rel="stylesheet" href="./resouces/landing_page/css/style.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/header.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/footer.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/popup.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/responsive.css">
+    <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
+    <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .postform
+    {
+        
+        min-height: 200px;
+        width: 70%;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border: 1px solid #DDD;
+    }
+    .postform > .inputData
+    {
+        width: 80%;
+        margin:auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .postform  > .postBtn
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .postform > .postBtn > button
+    {
+        margin-left: 3px;
+        margin-right: 3px;
+        padding: 10px;
+        box-sizing: border-box;
+        font-weight: 700;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+    #posSum
+    {
+      background-color: #229ace;
+    } 
+    #resetSum{
+        background-color: red;
+    }
+       
+     .postform > .inputData > .input > input
+    {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #DDD;
+        outline: none;
+    }
+
+    .postform > .inputData > .input > input:focus
+    {
+        border: 1px solid #229ace;
+    }
+
+
+    .postform > .inputData > .input > p
+    {
+        font-weight: 800;
+        color:#229ace;
+        margin-bottom: 2px;
+        margin-top: 2px;
+    }
+
+    .headTitle
+    {
+        text-align: center;
+        margin-top: 6%;
+        padding-top: 2%;
+        font-size: 18px;
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="cont">
+
+        <!--popup-->
+        <div class="overlay">
+        </div>
+            <div class="main-popup">
+            <div class="popup-header">
+            <div id="popup-close-button"><a href="#"></a></div>
+            <ul>
+                <li><a href="#" id="sign-in">Student</a></li>
+                <li><a href="#" id="register">Employer / T&P</a></li>
+            </ul>
+            </div><!--.popup-header-->
+            <div class="popup-content">
+
+            <form action="#" class="sign-in">
+                <div class="googlebtn">  
+                    <button><img src="./resouces/landing_page/image/google_logo.webp"/>Login with Google</button>
+                </div>
+                <div class="crossline">
+                    <hr class="he">
+                    <p>OR</p>
+                    <hr class="he">
+                </div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+                <label for="password">Password:</label>
+                <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+                <div class="link">
+                <a href="">Forgot Password?</a>
+                </div>
+                <input type="submit" id="submit" value="Login">
+                
+                <div class="btmclass">
+                    <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
+                </div>
+            </form>
+
+           
+            
+            <form action="#" class="register">
+               
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+                    <div class="link">
+                    <a href="">Forgot Password?</a>
+                    </div>
+                    <input type="submit" id="submit" value="Login">
+                    
+                    <div class="btmclass">
+                        <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
+                    </div>
+            </form>
+            </div><!--.popup-content-->
+        </div><!--.main-popup-->
+        <!--End popup-->
+
+              <!--responsive Menu bar-->
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="resMenu">
+            <a href="./intrenshala.html">Internships</a>
+            <a href="./training.html" target="_blank">Online Trainings <span>CONTEST</span></a>
+            <a href="#">WFH Internships</a>
+            <a href="./intrenshala.html">Fresher Jobs</a>
+            <a href="#">Contact Us</a>
+            <hr class="hrLine">
+            <a href="./login_student.html">Register - As a Student</a>
+            <a href="./login_emp.html">Register - As an Employer</a>
+            <a href="#">Login</a>
+      </div>
+    </div>
+      <!--End responsive Bar-->
+
+
+    <nav class="header">
+        <div class="height-cont">
+            <div class="flex">
+                <div class="imgflex">
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                    <a href="./index.html"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></a>
+                </div>
+                <div class="btn">
+                <div><a href="#">Dashboard</a></div>
+                <div style="border-bottom: 2px solid #229ace;"><a href="#">Post Internship</a></div>
+                <div><a href="">Post Fresher Job <span class="spanStyle">New</span></a></div>
+                <div><a href="./training.html" target="_blank">Online Trainings</a></div>
+                <div class="dropdown">
+            </div> 
+            </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+     <!--add new post form-->
+
+     <div class="headTitle">
+        <h5>Welcome to intrenshala <span style="color: blue;" id="nameEmp"></span></h5>
+        <h3>Post an internship</h3>
+        <p>Need assistance? Please visit Help Center</p>
+     </div>
+     <div class="postform">
+         
+     <form class="inputData" id="inputValue">
+         <div class="input">
+         <p>Job title</Title></p>
+         <input type="text" placeholder="Enter Job title , Ex: The Dream Icon Experience" name="job_title">
+        </div>
+        <div class="input">
+         <p>Designation</Title></p>
+         <input type="text" placeholder="Enter internship Designation , Ex: MERN Stack Devloper" name="designation">
+        </div>
+        <div class="input">
+         <p>Taglines</p>
+         <input type="text" placeholder="Enter Enter tags Line , Ex:You, your favourite icon, and the chance of a lifetime!" name="tagline">
+        </div>
+        <div class="input">
+         <p>Launch Date</p>
+         <input type="text" placeholder="Enter internship Launch date, Format : (DD/MM/YYYY)" name="L_date">
+        </div>
+        <div class="input">
+         <p>Stipend</p>
+         <input type="text" placeholder="Enter internship Stipend in (Rs.)" name="stipend">
+        </div>
+        <div class="input">
+         <p>Duration in (weeks/months/Years)</p>
+         <input type="text" placeholder="Enter internship Duration in (W/M/Y)" name="duration">
+        </div>
+        <div class="input">
+         <p>Last Apply Date</p>
+         <input type="date" placeholder="Enter internship last apply date (DD/MM/YY)" name="E_date">
+         </div>
+         <div class="input">
+         <p>KeyWords (multiple keywords use (,))</p>
+         <input type="text" placeholder="Enter internship Related Keywords which used in your Post , Ex :Experience , Part time allowed" name="keyword">
+         </div>
+         <div class="input">
+         <p>Image URL</p>
+         <input type="text" placeholder="Enter Company logo URL" name="image">
+         </div>
+        </form>
+        <div class="postBtn">
+            <button id="resetSum">Reset</button>
+            <button id="posSum">Submit</button>
+        </div>
+     </div>
+     <!--End new post form-->
+     </main>
+     <footer>
+        <div class="footerDiv">
+            <div class="sizing">
+             <div class="footerFlex">
+              <div>
+                <h5>Internships by places</h5>
+                <div class="list">
+                    <a href="">Internship in India</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Delhi</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Bangalore</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Hyderabad</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Mumbai</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Chennai</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Gurgaon</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Kolkata</a>
+                </div>
+                <div class="list">
+                    <a href="">Virtual internship</a>
+                </div>
+              </div>
+
+              <div>
+                  <!-- First section -->
+                <h5>Internship by Stream</h5>
+                <div class="list">
+                    <a href="">Computer Science Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Electronics Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Mechanical Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Civil Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Marketing Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Chemical Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Finance Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Summer Research Fellowship</a>
+                </div>
+                <div class="list">
+                    <a href="">Campus Ambassador Program</a>
+                </div>
+              </div>
+               <!-- End First section -->
+
+                <!-- Section section -->
+              <div>
+                  <h5>Online Trainings<span>OFFER</span></h5>
+                  <div class="list">
+                    <a href="">Web Development</a>
+                </div>
+                <div class="list">
+                    <a href="">Android App Development</a>
+                </div>
+                <div class="list">
+                    <a href="">Programming with Python</a>
+                </div>
+                <div class="list">
+                    <a href="">Data Science</a>
+                </div>
+                <div class="list">
+                    <a href="">Ethical Hacking</a>
+                </div>
+                <div class="list">
+                    <a href="">Core Java</a>
+                </div>
+                <div class="list">
+                    <a href="">Digital Marketing</a>
+                </div>
+                <div class="list">
+                    <a href="">Advanced Excel</a>
+                </div>
+                <div class="list">
+                    <a href="">Programming with C & C++</a>
+                </div>
+                </div>
+                <!-- End Section section -->
+                <!-- Third section -->
+              <div>
+                  <h5>About Internshala</h5>
+                  <div class="list">
+                    <a href="">About us</a>
+                </div>
+                <div class="list">
+                    <a href="">We're hiring</a>
+                </div>
+                <div class="list">
+                    <a href="">Hire interns for your company</a>
+                </div>
+                <div class="list">
+                    <a href="">Team Diary</a>
+                </div>
+                <div class="list">
+                    <a href="">Blog</a>
+                </div>
+                <div class="list">
+                    <a href="">Our Services</a>
+                </div>
+                <div class="list">
+                    <a href="">Terms & Conditions</a>
+                </div>
+                <div class="list">
+                    <a href="">Privacy</a>
+                </div>
+                <div class="list">
+                    <a href="">Contact us</a>
+                </div>
+                 <!-- End Fourth  section -->
+                  </div>
+                 
+             </div>
+             <hr id="hrLine">
+             <div class="copyright">
+                 <div class="media">
+                   <div><button id="playicon"><i class="ic-24-playstore"></i>Get Android App</button></div>
+                   <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                   <div><i class="ic-24-instagram"></i></div>
+                   <div><i class="ic-24-twitter"></i></div>
+                   <div><i class="ic-24-youtube"></i></i></div>
+                   <div><i class="ic-24-linkedin"></i></div>
+                 </div>
+                 <div class="copy">
+                    <div>© Copyright 2021 Internshala</div>
+                 </div>
+             </div>
+            </div>
+        </div>
+     </footer>
+    </div>
+</body>
+<script>
+    var arr = JSON.parse(localStorage.getItem('emplogin'));
+    var empButton = document.getElementById("posSum");
+    var FormPostDe = document.getElementById("inputValue");
+    empButton.addEventListener('click',addFunction);
+    function addFunction()
+    {
+      
+      
+      var job_title = FormPostDe.querySelector('input[name="job_title"]');
+      var designation = FormPostDe.querySelector('input[name="designation"]');
+      var tagline = FormPostDe.querySelector('input[name="tagline"]');
+      var launch_Date = FormPostDe.querySelector('input[name="L_date"]');
+      var stipend = FormPostDe.querySelector('input[name="stipend"]');
+      var duration = FormPostDe.querySelector('input[name="duration"]');
+      var e_apply = FormPostDe.querySelector('input[name="E_date"]');
+      var keyword = FormPostDe.querySelector('input[name="keyword"]');
+      var image = FormPostDe.querySelector('input[name="image"]');
+
+
+      var sm = FormPostDe.querySelectorAll('input');
+      
+      var value = true;
+      sm.forEach(function(el)
+      {
+        var nu = el;
+        var parent =nu.parentElement;
+        var p = document.createElement('span');
+        if(nu.value == "")
+          {
+            nu.style.border="1px solid red";
+            p.setAttribute('class','help-block');
+
+            var sn = parent.querySelector('span');
+            if(sn == null)
+            {
+              
+              p.innerText="This fiels is requirded";
+              p.style.color="red";
+              p.style.marginTop="10px";
+              p.style.fontSize="12px";
+              parent.append(p);
+              
+              
+            }
+            value = false;
+            
+          }
+          else
+          {
+                  var emp =nu.parentElement.querySelector('span');
+                  if(emp)
+                  {
+                    emp.remove();
+                  }
+                  nu.style.border="1px solid green";   
+                  
+          }
+  
+  
+      });
+      if(value)
+      {
+  
+         var postDeatails = 
+         {
+            heading: job_title.value,
+            intpresent: designation.value,
+            tagline: tagline.value,
+            launch_date: launch_Date.value,
+            REWARDS: stipend.value,
+            apply_by: e_apply.value,
+            duration:duration.value,
+            span: keyword.value.split(","),
+            source:image.value
+         }
+  
+        
+         let arr;
+         arr = localStorage.getItem('postDetails');
+         if(arr == null)
+         {
+            arr = [];
+         }
+         else
+         {
+            arr = JSON.parse(arr);
+         }
+  
+         arr.push(postDeatails);
+         localStorage.setItem('postDetails',JSON.stringify(arr));
+         
+         
+         var main = document.getElementById("inputValue");
+         let p = document.createElement('span');
+         p.style.textAlign="center";
+         p.style.paddingTop="20px";
+         p.style.color="green";
+         p.innerHTML="<b>Data SuccessFully Add</b>";
+         main.insertBefore(p,main.childNodes[0]);
+        
+         setTimeout(function() {
+          main.querySelector('p').remove();
+         }, 5000)
+         
+  
+        job_title.value="";
+        designation.value="";
+        tagline.value="";
+        launch_Date.value="";
+        stipend.value="";
+        e_apply.value="";
+        duration.value="";
+        keyword.value="";
+        image.value="";
+      }
+    }
+  
+  
+  </script>
+
+  <script>
+      var validLogin = localStorage.getItem('login');
+      if(validLogin == null)
+      {
+          window.location.href="./index.html";
+      }
+      else
+      {
+          var sd = document.getElementById("nameEmp");
+          sd.innerText=`" ${JSON.parse(validLogin).name} (${JSON.parse(validLogin).email})"`;
+      }
+      
+  </script>
+</html>
