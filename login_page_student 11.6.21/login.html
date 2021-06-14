@@ -78,79 +78,56 @@
                               <div class="or"><p>OR</p></div>
                               <div class="border"></div>
                             </div>
-                            
-
-                            <!-- form section 1 -->
-                            <div class="form-group">
-                                <label for="email" class="control-label">Email</label>
-                                <div data-toggle="popover" data-content="<div class='email_popover_close'><i class='ic-24-cross'></i></div><div>An official id (example: <span style='color:#1295c9' class='email_example'>name@company_name.com</span>) is strongly recommended as it helps us verify that you represent the company and enables us to provide you a quick service. If you're a student, please register <a href='https://internshala.com/registration/student' tabindex='20000'>here</a>.</div>" id="email_desktop">
-                                    <input type="email" class="form-control email-field-employer-registration" id="email" name="email" placeholder="name@company_name.com">
-                                </div>
-                                <p id="span_note" style="margin-left:2px;">
-                                </p>
-                            </div>
                             <!-- form section 2 -->
-                           <div class="form-group">
-                                <label for="password" class="control-label">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Minimum 6 characters">
+                            <div class="formItem">
+                                <label for="email">Email</label>
+                                <div>
+                                    <input type="email" class="formControl" id="email" name="email" placeholder="name@company_name.com">
+                                    <p id="error-email"></p>
+                                </div>
                             </div>
                             <!-- form section 3 -->
-                           <div class="row">
-                                <div class="col" id="first_name_container">
-                                    <div class="form-group">
-                                        <label for="first_name" class="control-label">First Name</label>
-                                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Your First Name">
+                           <div class="formItem">
+                                <label for="password">Password</label>
+                                <input type="password" class="formControl" id="password" name="password" placeholder="Minimum 6 characters">
+                                <p id="error-password"></p>
+                            </div>
+                            <!-- form section 4 -->
+                           <div class="nameSecCont">
+                                <div class="nameSec">
+                                    <div class="formItem">
+                                        <label for="first_name">First Name</label>
+                                        <input type="text" class="formControl" id="first_name" name="first_name" placeholder="Your First Name">
+                                        <p id="error-name"></p>
                                     </div>
                                 </div>
-                                <div class="col" id="last_name_container">
-                                    <div class="form-group">
-                                        <label for="last_name" class="control-label">Last Name</label>
-                                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Your Last Name">
+                                <div class="nameSec">
+                                    <div class="formItem">
+                                        <label for="last_name">Last Name</label>
+                                        <input type="text" class="formControl" id="last_name" name="last_name" placeholder="Your Last Name">
                                     </div>
                                 </div>
                             </div>
-                            <!-- form section 4 -->
-                           <!-- <div class="form-group">
-                                <label for="phone_primary" class="control-label">Mobile Number</label>
-                                <div class="row" id="phone_container">
-                                    <div class="col col-3">
-                                        <input type="text" class="form-control country-code" id="country_code" name="country_code" value="+91">
-                                    </div>
-                                    <div class="col col-9">
-                                        <input type="number" class="form-control mobile-number" id="phone_primary" name="phone_primary" placeholder="10 digit mobile number">
-                                    </div>
-                                </div>
-                            </div> -->
                             <!-- form section 5-extras -->
-                            <div id="job_registration_form_extras" style="margin-top: 16px">
+                            <div id="formExtras" style="margin-top: 16px">
                                 <div class="label_toc">
                                     <span style="color: #333333; line-height: 1.57; font-weight: 400">
-                                        By registering, you agree to our <a href="/terms#employer" target="_blank">Terms and Conditions</a>.
+                                        By registering, you agree to our <a href="#" target="_blank">Terms and Conditions</a>.
                                     </span>
                                 </div>
-
-                                <div id="job_registration_button_container" style="display: none; margin-top: 16px;">
-                                    <div id="job_employer_registration_button">
-                                        <button type="submit" class="btn btn-primary">Post Job Now</button>
+                                <div id="student-signup-btn-cont" style="display: block">
+                                    <div id="student-signup-btn">
+                                        <!--this goes in button bellow- data-modal-target="#modal" -->
+                                        <button onclick="return studentSignup()"  type="submit" class="btn btnSignup" id="studentSignup-Btn">Sign Up</button>
                                     </div>
-                                    <div class="label_toc_2">
-                                        <div class="cta-below-2">
-                                            Already registered? <a data-toggle="modal" data-target="#login-modal">Login here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="internship_registration_button_container" style="display: block">
-                                    <div id="job_employer_registration_button">
-                                        <button onclick="studentSignup()" type="submit" class="btn btn-primary">Sign Up</button>
-                                    </div>
-                                    <div class="label_toc_2">
-                                        <a href="/employer/help_center_faq/16">
-                                          <p id="already-reg">Already registered? <span id="job_toc">Login</span></p>   
+                                    <div class="labelExtra">
+                                        <a href="#">
+                                          <p id="already-reg">Already registered? <span>Login</span></p>   
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- form section 5-extras-end -->
+                            <!-- form section 4-extras-end -->
                         </div>
                         <!-- form --end -->
                     </div>
@@ -159,14 +136,29 @@
                 </div>
             </div>
         </div>
-        
-
-
     </main>
 
-    <!-- middle section- end -->
+  <!-- modal-sucess-html-start -->
 
-    <!-- footer section- start -->
+ <div class="bg-modal">
+	<div class="modal-contents">
+        <div class="modalLeft">
+            <img src="./resouces/image/successCheck.svg" alt="check"> 
+        </div>
+        <div class="modalRight">
+            <div class="message">An email with a verification link has been sent to your email id. Please click on that link to confirm your registration. Check your spam folder or promotions tab too.</div>
+            <!-- put login url in close button -->
+            <div class="closeBtnCont"><button data-close-button class="closebtn">close</button></div> 
+        </div> 
+	</div>
+</div>
+
+
+  <!-- modal-sucess-html-end -->
+
+<!-- ------------------------------------------------------middle section- end---------------------------------------------------------------------- -->
+
+<!-- -----------------------------------------------------footer section- start------------------------------------------------------------------------- -->
 
     <footer>
         <div class="footerDiv">
@@ -312,13 +304,14 @@
                  </div>
             
     </footer>
-    <!-- footer section- end -->
-</div>
+<!-- ------------------------------------------------------footer section- end------------------------------------------------------------------------ -->
+<!-- </div> -->
 </body>
 </html>
+
 <script>
+ 
     function studentSignup() {
-   // e.preventDefault()
     
     let email = document.getElementById('email').value
 
@@ -334,12 +327,69 @@
         firstName,
         lastName,
     }
+    var count = 0;
 
-    /*show error if any field is empty*/
+    //validation for email
 
-    if (email == '' || password == '' || firstName == '' || lastName == '') {
-        alert("please fill all the fields")
+    const students = JSON.parse(localStorage.getItem('students'))
+    for(i=0; i<students.length; i++){
+        if(students[i].email==email){
+            document.getElementById('error-email').innerHTML="* Email already exist"
+            count = 1
+        }
     }
+    if(email[0]=='@'){
+        document.getElementById('email').style.background='#FFFAFA'
+        document.getElementById('email').style.border="1px solid red"
+        document.getElementById('error-email').innerHTML="* Please enter a valid email address"
+        count=1;
+    }
+    if(email == ''){
+        document.getElementById('error-email').innerHTML="* This field is required"
+        count=1;
+    }  
+
+    //validation for password
+    if(password.length<6){
+        
+        document.getElementById('error-password').innerHTML="* Please enter at least 6 characters"
+        document.getElementById('password').style.border="1px solid red"
+        document.getElementById('password').style.background='#FFFAFA'
+        count=1;
+    }
+    if(password==''){
+        document.getElementById('error-password').innerHTML="* This field is required"
+        count=1;
+    }
+    
+
+    //validation for name
+    if(firstName==''){
+        document.getElementById('first_name').style.border="1px solid red"
+        document.getElementById('first_name').style.background='#FFFAFA'
+        document.getElementById('error-name').innerHTML="* This field is required"
+        count=1;
+    }
+    
+    //check if any issue in input fields -
+
+    if(count==1){
+        return false;
+    }
+
+    //if no issue in form, show success pop-up -
+
+    function showmodal() {
+        document.querySelector('.bg-modal').style.display = "flex";
+    };
+
+    document.querySelector('.closebtn').addEventListener("click", function() {
+        document.querySelector('.bg-modal').style.display = "none";
+    });
+    
+    showmodal();
+
+    //push details in localstorage
 
     let arr;
 
@@ -355,5 +405,12 @@
     arr.push(studentSignupObj)
 
     localStorage.setItem('students', JSON.stringify(arr))
-}
+
+
+    //clear input fields-
+   // window.location.href('login.html')
+
+} 
+
+
 </script>
