@@ -72,6 +72,18 @@
         border: 1px solid #DDD;
         outline: none;
     }
+    .postform > .inputData > .input > select
+    {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #DDD;
+        outline: none;
+        background-color: white;
+    }
 
     .postform > .inputData > .input > input:focus
     {
@@ -94,7 +106,6 @@
         padding-top: 2%;
         font-size: 18px;
     }
-
 
 </style>
 </head>
@@ -210,11 +221,56 @@
          
      <form class="inputData" id="inputValue">
          <div class="input">
-         <p>Job title</Title></p>
+         <p>Job title</p>
          <input type="text" placeholder="Enter Job title , Ex: The Dream Icon Experience" name="job_title">
         </div>
         <div class="input">
-         <p>Designation</Title></p>
+            <p>Category</p>
+            <select name="category" id="category" >
+                <option value="" disabled selected hidden   >e.g. Marketing</option>
+                <option value="android">Android App Development</option>
+                <option value="animation">Animation</option>
+                <option value="blogging">Blogging</option>
+                <option value="brandmanagement">Brand Management</option>
+                <option value="caddesign">CAD Design</option>
+                <option value="cloudcomputing">Cloud Computing</option>
+                <option value="datascience">Data Science</option>
+                <option value="digitalmarketing">Digital Marketing</option>
+            </select>
+        </div>
+        <div class="input">
+            <p>Location</p>
+            <select name="location" id="location">
+                <option value="" disabled selected hidden>e.g. Mumbai</option>
+                <option value="banglore">Banglore</option>
+                <option value="delhi">Delhi</option>
+                <option value="chennai">Chennai</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="noida">Noida</option>
+                <option value="gurugram">Gurugram</option>
+                <option value="kolkata">Kolkata</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+            </select>
+        </div>
+        <div class="input">
+            <p>Work From Home</p>
+            <select name="wfh" id="wfh">
+                <option value="" disabled selected hidden>Yes or No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="input">
+            <p>Part-Time</p>
+            <select name="parttime" id="parttime">
+                <option value="" disabled selected hidden>Yes or No</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="input">
+         <p>Designation</p>
          <input type="text" placeholder="Enter internship Designation , Ex: MERN Stack Devloper" name="designation">
         </div>
         <div class="input">
