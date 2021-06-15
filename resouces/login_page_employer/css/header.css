@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
 }
-.imgflex > img {
-  padding-bottom: 10px;
+.imgflex > a > img {
+  padding-top: 10px;
   padding-left: 35px;
 }
 .navFlex > .btn {
