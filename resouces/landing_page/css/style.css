@@ -439,7 +439,7 @@
   font-family: "Inter var", sans-serif;
 }
 
-.LSlider > .gap > input {
+.LSlider > .gap > select {
   height: 40px;
   width: 100%;
   padding: 10px;
@@ -448,6 +448,7 @@
   margin-bottom: 20px;
   outline: none;
   border: 1px solid #ddd;
+  background-color: white;
 }
 
 .LSlider > .gap > input:hover {
