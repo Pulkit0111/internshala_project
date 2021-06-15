@@ -21,7 +21,7 @@
   top: 30px;
   margin: 0;
   width: 100%;
-  height: 450px;
+  min-height: 250px;
   background-color: #e7e7f6;
   border-radius: 5px;
   z-index: 15;
@@ -177,6 +177,22 @@ form.sign-in input {
 }
 
 input#submit {
+  background-color: #00a5ec;
+  color: #fff;
+  height: 40px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 25px;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  border: none;
+}
+
+input#submit2 {
   background-color: #00a5ec;
   color: #fff;
   height: 40px;
