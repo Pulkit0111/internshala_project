@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="./resouces/landing_page/css/header.css">
     <link rel="stylesheet" href="./resouces/landing_page/css/footer.css">
     <link rel="stylesheet" href="./resouces/landing_page/css/banner.css">
-    <link rel="stylesheet" href="./resouces/landing_page/css/responsive.css">
     <link rel="stylesheet" href="./resouces/landing_page/css/popup.css">
+    <link rel="stylesheet" href="./resouces/landing_page/css/responsive.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="cont">
@@ -51,12 +52,12 @@
                 <input type="submit" id="submit" value="Login">
                 
                 <div class="btmclass">
-                    <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
                 </div>
             </form>
 
            
-               <form class="register" id="emplogin">
+            <form class="register" id="emplogin">
                 <div id="main"></div>
                 <div>
                   <label for="email">Email:</label>
@@ -73,24 +74,45 @@
                 <input type="button" id="submit2" value="Login">
               </div>
                 <div class="btmclass">
-                    <p>New to Internshala? Register (<a href="./resouces/login_page_student/login.html"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
                 </div>
               </form>
             </div><!--.popup-content-->
         </div><!--.main-popup-->
         <!--End popup-->
 
+              <!--responsive Menu bar-->
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="resMenu">
+            <a href="#">Internships</a>
+            <a href="#">Online Trainings <span>CONTEST</span></a>
+            <a href="#">WFH Internships</a>
+            <a href="#">Fresher Jobs</a>
+            <a href="#">Contact Us</a>
+            <hr class="hrLine">
+            <a href="#">Register - As a Student</a>
+            <a href="#">Register - As an Employer</a>
+            <a href="#">Login</a>
+      </div>
+    </div>
+      <!--End responsive Bar-->
+
 
     <nav class="header">
         <div class="height-cont">
             <div class="flex">
-                <div class="imgflex"><a href="./index.html">
-                    <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></div>
-                    </a>
+                <div class="imgflex">
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                    <a href="./index.html"><img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></a>
+                </div>
                 <div class="btn">
                 <div><a href="./intrenshala.html">Internships</a></div>
-                <div><a href="./training.html" target="_blank">Online Trainings <span class="spanStyle">OFFER</span></a></div>
-                <div><a href="./intrenshala.html">Fresh Jobs</a></div>
+                <div><a href="./resouces/online_training/training.html" target="_blank">Online Trainings <span class="spanStyle">OFFER</span></a></div>
+                <div><a href="">Fresh Jobs</a></div>
                 <div><button class="btnLogin" id="loginBtn">Login</button></div>
                 <div class="dropdown">
                 <div>
@@ -256,7 +278,7 @@
 
                   <!--training section-->
 
-                  <div class="intrenship training">
+                  <div class="training">
                     <div class="innerIntrenship">
                        <h2>Internshala Trainings</h2>
                        <p>Learn new-age skills on the go
@@ -330,7 +352,7 @@
 
                  <!--Job section-->
 
-                 <div class="intrenship training">
+                 <div class="training">
                     <div class="innerIntrenship">
                        <h2>Fresher Jobs <span>New</span></h2>
                        <p>Premium fresher jobs on your fingertips</p>
@@ -522,4 +544,104 @@
 <script type="text/javascript" src="./resouces/landing_page/js/script.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/banner.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/popup.js"></script>
+<script type="text/javascript" src="./resouces/landing_page/js/filter.js"></script>
+<script type="text/javascript" src="./resouces/landing_page/js/valid.js"></script>
+
+<script>
+    var arr1 = JSON.parse(localStorage.getItem('emplogin'));
+    var empButton = document.getElementById("submit2");
+    empButton.addEventListener('click',addFunction2);
+  
+    function addFunction2()
+    {
+      
+      var empForm2 = document.getElementById("emplogin");
+      var email = empForm2.querySelector('input[id="log_email"]');
+      var password = empForm2.querySelector('input[id="log_password"]');
+      
+      
+      
+      var sm = empForm2.querySelectorAll('input');
+      var value = true;
+      sm.forEach(function(el)
+      {
+        var nu = el;
+  
+        ssp = document.getElementById(nu.id);
+        var parent =ssp.parentElement;
+        var p = document.createElement('p');
+        if(ssp.value == "")
+          {
+            ssp.style.border="1px solid red";
+            p.setAttribute('class','help-block');
+            var sn = parent.querySelector('p');
+            if(sn == null)
+            {
+              
+              p.innerText="This fiels is requirded";
+              p.style.color="red";
+              p.style.marginLeft="13px";
+              p.style.fontSize="12px";
+              parent.append(p);
+              
+              
+            }
+            value = false;
+            
+          }
+          else
+          {
+                  var emp = ssp.parentElement.querySelector('p');
+                  if(emp)
+                  {
+                    emp.remove();
+                  }
+                  ssp.style.border="1px solid green";   
+                  
+          }
+  
+  
+      });
+  
+      if(value)
+      {
+         var isValidate = false;
+          var num = arr1.forEach(function(va)
+          {
+               if(va.email == email.value && va.Password == password.value)
+               {
+                  isValidate = true;
+                  localStorage.setItem('login',JSON.stringify({email:email.value,name:va.name}))
+                  setTimeout(function () {
+                    window.location.href="./newpost.html";
+                  }, 2000);
+                  
+                }
+                
+          });
+          var main = document.getElementById("main");
+          let p = document.createElement('p');
+          if(isValidate)
+          {
+            p.style.textAlign="center";
+            p.style.paddingTop="20px";
+            p.style.color="green";
+            p.innerHTML="<b>You have successfully Login :)</b>";
+          }
+          else
+          {
+            p.style.textAlign="center";
+            p.style.paddingTop="20px";
+            p.style.color="red";
+            p.innerHTML="<b>Invalid Credentials (:</b>"; 
+          }
+         main.insertBefore(p,main.childNodes[0]);
+        
+         setTimeout(function() {
+          main.querySelector('p').remove();
+         }, 5000);
+        
+      }
+    }
+  </script>
 </html>
