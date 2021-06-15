@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="./resouces/landing_page/css/popup.css">
     <link rel="icon" href="https://internshala.com//favicon.ico?v=5" />
     <link rel="stylesheet" href="https://internshala.com/static/css/home/index.1621498208.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 </head>
 <body>
     <div class="cont">
@@ -80,11 +82,32 @@
         </div><!--.main-popup-->
         <!--End popup-->
 
+              <!--responsive Menu bar-->
+      
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="resMenu">
+            <a href="#">Internships</a>
+            <a href="#">Online Trainings <span>CONTEST</span></a>
+            <a href="#">WFH Internships</a>
+            <a href="#">Fresher Jobs</a>
+            <a href="#">Contact Us</a>
+            <hr class="hrLine">
+            <a href="#">Register - As a Student</a>
+            <a href="#">Register - As an Employer</a>
+            <a href="#">Login</a>
+      </div>
+    </div>
+      <!--End responsive Bar-->
 
     <nav class="header">
         <div class="height-cont">
             <div class="flex">
-                <div class="imgflex"><a href="./index.html">
+                <div class="imgflex">
+                    <a href="javascript:void(0);" class="icon" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                      </a>
+                    <a href="./index.html">
                     <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></div>
                     </a>
                 <div class="btn">
@@ -256,7 +279,7 @@
 
                   <!--training section-->
 
-                  <div class="intrenship training">
+                  <div class="training">
                     <div class="innerIntrenship">
                        <h2>Internshala Trainings</h2>
                        <p>Learn new-age skills on the go
@@ -330,7 +353,7 @@
 
                  <!--Job section-->
 
-                 <div class="intrenship training">
+                 <div class="training">
                     <div class="innerIntrenship">
                        <h2>Fresher Jobs <span>New</span></h2>
                        <p>Premium fresher jobs on your fingertips</p>
@@ -522,4 +545,5 @@
 <script type="text/javascript" src="./resouces/landing_page/js/script.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/banner.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/popup.js"></script>
+<script type="text/javascript" src="./resouces/landing_page/js/filter.js"></script>
 </html>

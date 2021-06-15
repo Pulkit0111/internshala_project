@@ -57,9 +57,21 @@
 
 .cont > main > .training {
   width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: 80px;
 }
 
+/*-------------*/
+
 .cont > main > .intrenship > .innerIntrenship > h2 {
+  padding-bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.cont > main > .training > .innerIntrenship > h2 {
   padding-bottom: 20px;
   display: flex;
   width: 100%;
@@ -76,13 +88,37 @@
   margin-left: 8px;
 }
 
+.cont > main > .training > .innerIntrenship > h2 > span {
+  background: #ff8c00;
+  color: white;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
 .cont > main > .intrenship > .innerIntrenship > p {
   padding-bottom: 50px;
   font-size: 18px;
   color: #484848;
 }
 
+.cont > main > .training > .innerIntrenship > p {
+  padding-bottom: 50px;
+  font-size: 18px;
+  color: #484848;
+}
+
 .cont > main > .intrenship > .innerIntrenship > .category > .categoryItems {
+  display: flex;
+  margin-top: 24px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.cont > main > .training > .innerIntrenship > .category > .categoryItems {
   display: flex;
   margin-top: 24px;
   justify-content: center;
@@ -103,9 +139,34 @@
   margin-bottom: 30px;
 }
 
+.cont > main > .training > .innerIntrenship > .category > .categoryItems > div {
+  padding: 25px 10px 25px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
 .cont
   > main
   > .intrenship
+  > .innerIntrenship
+  > .category
+  > .categoryItems
+  > div
+  > a
+  > .text {
+  font-family: "Inter var", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+  margin-top: 10px;
+  width: 120px;
+  line-height: 1.5;
+}
+
+.cont
+  > main
+  > .training
   > .innerIntrenship
   > .category
   > .categoryItems
@@ -133,11 +194,34 @@
   width: 200px;
 }
 
+.cont
+  > main
+  > .training
+  > .innerIntrenship
+  > .category
+  > .categoryItems
+  > div
+  > a
+  > .width {
+  width: 200px;
+}
+
 /*category hover*/
 
 .cont
   > main
   > .intrenship
+  > .innerIntrenship
+  > .category
+  > .categoryItems
+  > .divHover:hover {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+  color: red;
+}
+
+.cont
+  > main
+  > .training
   > .innerIntrenship
   > .category
   > .categoryItems
@@ -158,7 +242,26 @@
   color: #00a5ec;
 }
 
+.cont
+  > main
+  > .training
+  > .innerIntrenship
+  > .category
+  > .categoryItems
+  > .divHover:hover
+  > a
+  > .text {
+  color: #00a5ec;
+}
+
 .cont > main > .intrenship > .innerIntrenship > .categoryLink {
+  margin-top: -40px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #006bc2;
+}
+
+.cont > main > .training > .innerIntrenship > .categoryLink {
   margin-top: -40px;
   margin-bottom: 30px;
   font-size: 16px;
@@ -765,4 +868,19 @@
 
 .filter_button > button > span {
   font-weight: 700;
+}
+
+.help-block::before {
+  content: "\e900";
+  font-size: 16px;
+  font-family: internshala-icons !important;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: sub;
+  margin-right: 4px;
 }
