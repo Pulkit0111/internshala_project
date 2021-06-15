@@ -303,7 +303,7 @@
          </div>
         </form>
         <div class="postBtn">
-            <button id="resetSum">Reset</button>
+            <button id="resetSum" onclick="test()">Reset</button>
             <button id="posSum">Submit</button>
         </div>
      </div>
@@ -463,14 +463,23 @@
     </div>
 </body>
 <script>
+
+
+
+    
     var arr = JSON.parse(localStorage.getItem('emplogin'));
     var empButton = document.getElementById("posSum");
     var FormPostDe = document.getElementById("inputValue");
     empButton.addEventListener('click',addFunction);
     function addFunction()
     {
-      
-      
+    //   new details
+        let category = document.getElementById('category').value
+        let location = document.getElementById('location').value
+        let wfh = document.getElementById('wfh').value
+        let parttime = document.getElementById('parttime').value
+
+
       var job_title = FormPostDe.querySelector('input[name="job_title"]');
       var designation = FormPostDe.querySelector('input[name="designation"]');
       var tagline = FormPostDe.querySelector('input[name="tagline"]');
@@ -536,7 +545,11 @@
             apply_by: e_apply.value,
             duration:duration.value,
             span: keyword.value.split(","),
-            source:image.value
+            source:image.value,
+            category,
+            location,
+            wfh, 
+            parttime
          }
   
         
