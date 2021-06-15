@@ -1,0 +1,911 @@
+<!-- After signup/register student will be redirected to this page -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.header {
+  height: 72px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 15%);
+  margin-bottom: 2px;
+}
+
+.header > .height-cont {
+  height: 100%;
+}
+
+.header > .height-cont > .flex {
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.header > .height-cont > .flex > .imgflex {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.header > .height-cont > .flex > .imgflex > .icon {
+  padding-top: 10%;
+  display: none;
+}
+
+.header > .height-cont > .flex > .imgflex > img {
+  padding-bottom: 10px;
+  width: 60%;
+  height: 100%;
+}
+
+.header > .height-cont > .flex > .btn {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0px;
+}
+.header > .height-cont > .flex > .btn > div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.header > .height-cont > .flex > .btn > div > a {
+  text-decoration: none;
+  color: #525050;
+  font-weight: 600;
+}
+
+.header > .height-cont > .flex > .btn > div > a:hover {
+  color: #008bdc;
+}
+
+.header > .height-cont > .flex > .btn > div > a > .spanStyle,
+.sidenav > .resMenu > a > span {
+  background-color: #ff8c00;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.header > .height-cont > .flex > .btn > div > .btnLogin {
+  background-color: white;
+  border: none;
+  border: 1px solid #00a5ec;
+  border-radius: 4px;
+  color: #00a5ec;
+  padding: 9px 20px 9px 20px;
+  font-weight: bold;
+}
+
+.header > .height-cont > .flex > .btn > .dropdown > div > .btnRegister {
+  background-color: #00a5ec;
+  border: none;
+  border: 1px solid #00a5ec;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 20px 5px 20px;
+  font-weight: bold;
+}
+
+.header > .height-cont > .flex > .btn > .dropdown:hover {
+  border-bottom: 10px solid #008bdc;
+}
+
+.header > .height-cont > .flex > .btn > .dropdown > div {
+  position: relative;
+  display: inline-block;
+}
+
+.header > .height-cont > .flex > .btn > .dropdown > div > .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  right: 0;
+  left: auto;
+  margin-top: 18%;
+  min-width: 120px;
+  z-index: 1;
+}
+
+.header
+  > .height-cont
+  > .flex
+  > .btn
+  > .dropdown:hover
+  > div
+  .dropdown-content {
+  display: block;
+}
+.header
+  > .height-cont
+  > .flex
+  > .btn
+  > .dropdown
+  > div
+  > .dropdown-content
+  > nav
+  > div {
+  padding: 5px;
+}
+
+.header
+  > .height-cont
+  > .flex
+  > .btn
+  > .dropdown
+  > div
+  > .dropdown-content
+  > nav
+  > div
+  > a {
+  text-decoration: none;
+  color: #525050;
+  font-family: "Inter var", sans-serif;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.header
+  > .height-cont
+  > .flex
+  > .btn
+  > .dropdown
+  > div
+  > .dropdown-content
+  > nav
+  > div
+  > a:hover {
+  color: #00a5ec;
+}
+
+/*main css */
+
+/* footer-css-start */
+
+.cont > footer > .footerDiv {
+  background-color: #333;
+  min-height: 460px;
+}
+
+.cont > footer > .footerDiv > .sizing {
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.cont > footer > .footerDiv > .sizing > .footerFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+}
+
+.cont > footer > .footerDiv > .sizing > .footerFlex > div > .list {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Inter var", sans-serif;
+  color: #fff;
+}
+.cont > footer > .footerDiv > .sizing > .footerFlex > div > h5 {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 600;
+  font-family: "Inter var", sans-serif;
+}
+
+.cont > footer > .footerDiv > .sizing > .footerFlex > div > h5 > span {
+  background-color: #ff8c00;
+  padding: 4px;
+  margin-left: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.cont > footer > .footerDiv > .sizing > .footerFlex > div > .list > a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  color: #fff;
+}
+#hrLine {
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.cont > footer > .footerDiv > .sizing > .copyright {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+  color: white;
+}
+
+.cont > footer > .footerDiv > .sizing > .copyright > .media {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cont > footer > .footerDiv > .sizing > .copyright > .media > div > button {
+  height: 100%;
+  height: 50px;
+  width: 180px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+#playicon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+/* footer css-end */
+
+/* responsive-css-start */
+
+@media only screen and (max-width: 900px) {
+  .LSlider {
+    display: none;
+  }
+
+  .RSlider {
+    width: 100%;
+  }
+  .cont > footer > .footerDiv > .sizing > .footerFlex > div:nth-child(-n + 3) {
+    display: none;
+  }
+  .cont > footer > .footerDiv > .sizing > hr {
+    display: none;
+  }
+
+  .cont > footer > .footerDiv > .sizing > .copyright {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cont > footer > .footerDiv > .sizing > .copyright > .media {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: flex-start;
+    row-gap: 30px;
+    column-gap: 30px;
+  }
+
+  .cont
+    > footer
+    > .footerDiv
+    > .sizing
+    > .copyright
+    > .media
+    > div:nth-child(1) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .cont > footer > .footerDiv > .sizing > .copyright > .copy {
+    border-top: 2px solid #666;
+    margin-top: 20px;
+    padding-top: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .title,
+  .toggle_content {
+    margin-left: 0%;
+  }
+
+  .header > .height-cont > .flex > .btn {
+    display: none;
+  }
+
+  .header > .height-cont > .flex > .imgflex > .icon {
+    display: block;
+  }
+
+  .header {
+    width: 100%;
+  }
+
+  .header > .height-cont {
+    padding-left: 5%;
+  }
+
+  .header > .height-cont > .flex > .imgflex > img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .filter_button {
+    display: block;
+  }
+  .header > .height-cont > .flex > .imgflex > a > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .discrip,
+  .details {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+
+/* responsive-css-end */
+
+/* form-css start */
+.max-width-cont{
+    max-width: 1224px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+}
+
+
+  #formCont{
+    margin-left: 15px;
+    padding: 30px 0;
+    width: 360px;
+    text-align: left;
+  }
+  .internshala-form{
+    max-width: 400px;
+    margin: 64px auto 48px;
+    position: relative;
+    z-index: 0;
+    border: 1px solid #DDD;
+    border-radius: 6px;
+    padding: 24px;
+    background: #fff;
+      display: block;
+  }
+  .form {
+    /* display: flex;
+    flex-direction: column;   */
+      border: 0;
+      background-color: #fff;
+      box-sizing: border-box;
+      margin-top: 10px;
+      /* box-shadow: 0 8px 16px rgb(0 0 0 / 8%); */
+      margin-bottom: 0;
+
+  }
+  .formItem{
+    clear: both;
+    margin-bottom: 16px;
+  }
+  #google-btn-cont{
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #EEE;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 11px 10px;
+    margin-bottom: 12px;
+  }
+  .google-img-cont{
+    height: 16px;
+  }
+  .google-img-cont img{
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    vertical-align: middle;
+    border-style: none;
+}
+  .google-content{
+    font-size: 14px;
+    padding: 0 8px;
+    font-weight: 600;
+    color: #484848;
+  }
+  .or-cont{
+    text-align: center;
+    display: block;
+  }
+  .or{
+    color: #666;
+    padding: 0 0 6px 0;
+    background: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.or p{
+  width: 40px;
+    margin: 0 auto!important;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    font-size: 12px;
+}
+  .or-cont .border{
+    position: relative;
+    margin-top: -14px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #EEE!important;
+    border: 0.6px solid #dee2e6!important;
+  }
+
+  /* error-message */
+  #error-password, #error-email, #error-name{
+    color: #e0343df8;
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  label {
+      font-family: sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 4px;
+      display: inline-block;
+  }
+  .form > p{
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    margin-left: 2px;
+    display: block;
+        margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+  }
+  .formControl{
+  box-shadow: none;
+  padding: 11px;
+  background: #fff;
+  color: #484848;
+  border: 1px solid #DDD;
+  border-radius: 3px;
+  font-size: 14px;
+  height: 40px;
+  line-height: 1.14285714;
+  font-family: Inter,sans-serif;
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  }
+  .form > input{
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: auto;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  border-radius: 3px !important;
+  }
+  .nameSecCont{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .form .nameSecCont .nameSec:first-of-type {
+      padding-left: 15px;
+      padding-right: 3px;
+  }
+  .form .nameSecCont .nameSec:last-of-type {
+      padding-left: 3px;
+      padding-right: 15px;
+  }
+  .nameSec{
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  .label_toc {
+      font-size: 14px;
+      color: #00A5EC;
+      line-height: 1.57;
+      font-weight: 400;
+      float: right;
+      cursor: pointer;
+      padding-bottom: 10px;
+
+  }
+  button, input{
+    overflow: visible;
+    
+  }
+  button, input, optgroup, select, textarea {
+    margin: 0;
+  }
+
+  #student-signup-btn-cont{
+    display: block;
+  }
+  #student-signup-btn {
+      text-align: center;
+      margin: 12px 0 16px;
+  }
+  .btn.btnSignup {
+    width: 100%;
+      padding: 12px 16px;
+      background: #00A5EC;
+      border-radius: 3px;
+      border: 1px solid #00A5EC;
+  }
+  .btn {
+      padding: 7px 15px;
+      font-weight: 600;
+      min-width: 80px;
+      line-height: 1.14285714;
+      font-size: 14px;
+  }
+  .btnSignup {
+      color: #fff;
+      background-color: #007bff;
+      border-color: #007bff;
+          transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  button, input, optgroup, select, textarea {
+      margin: 0;
+      font-family: inherit;
+  }
+  .labelExtra {
+      text-align: center;
+  }
+  .labelExtra a{
+      text-decoration: none;
+  }
+   #already-reg{
+    color: #484848;
+  }
+    #already-reg span{
+    color: #007bff;
+  }
+ 
+  .register {
+    width: 100vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .register > button {
+    width: 215px;
+    padding: 12px;
+    font-size: 16px;
+    margin: auto;
+    background: #00A5EC;
+    border-radius: 3px;
+    border: 1px solid #00A5EC;
+    color: white;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    display: inline-block;
+  }
+
+  /* form-css - end */
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <nav class="header">
+            <div class="height-cont">
+                <div class="flex">
+                    <div class="imgflex"><a href="./index.html">
+                        <img src="https://internshala.com/static/images/common/new_internshala_logo.svg"/></div>
+                        </a>
+                    <div class="btn">
+                    <div><a href="./intrenshala.html">Internships</a></div>
+                    <div><a href="./training.html" target="_blank">Online Trainings <span class="spanStyle">OFFER</span></a></div>
+                    <div><a href="./intrenshala.html">Fresh Jobs</a></div>
+                    <div><button class="btnLogin" id="loginBtn">Login</button></div>
+                    <div class="dropdown">
+                        <div>
+                        <button class="btnRegister" id="registerbtn">Register  <i class="is_icon_header ic-24-filled-down-arrow"></i></button>
+                        <div class="dropdown-content">
+                        <nav>
+                            <div><a href="./login_student.html">As a Student</a></div>
+                            <div><a href="./login_emp.html">As an employer</a></div>
+                        </nav>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    <main>
+        <div class="max-width-cont">
+            <div class="internshala-form" id="form-cont">
+                <div class="form">
+                    <!-- form section 1 google button -->
+                    <div id="google-btn-cont">
+                        <div class="google-img-cont">
+                        <img src="./resouces/login_page_student/image/google_logo-min.png" alt="google">
+                        </div>
+                        <div class="google-content">Sign Up with Google</div>
+                    </div>
+                    <div class="or-cont">
+                        <div class="or"><p>OR</p></div>
+                        <div class="border"></div>
+                    </div>
+                    <!-- form section 2 -->
+                    <div class="formItem">
+                        <label for="email">Email</label>
+                        <div>
+                            <input type="email" class="formControl" id="email" name="email" placeholder="name@company_name.com">
+                            <p id="error-email"></p>
+                        </div>
+                    </div>
+                    <!-- form section 3 -->
+                    <div class="formItem">
+                        <label for="password">Password</label>
+                        <input type="password" class="formControl" id="password" name="password" placeholder="Minimum 6 characters">
+                        <p id="error-password"></p>
+                    </div>
+                    
+                    <!-- form section 5-extras -->
+                    <div id="formExtras" style="margin-top: 16px">
+                        <div class="label_toc">
+                                Forget password?
+                        </div>
+                        <div id="student-signup-btn-cont" style="display: block">
+                            <div id="student-signup-btn">
+                                <!--redirecting to the internship page -->
+                                <button onclick="checkLogin()"  type="submit" class="btn btnSignup" id="studentSignup-Btn">Login</button>
+                            </div>
+                            <div class="labelExtra">
+                                <a href="#">
+                                    <p id="already-reg">New to Internshala? <span>Sign up</span></p>   
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form section 4-extras-end -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+         <footer>
+        <div class="footerDiv">
+            <div class="sizing">
+             <div class="footerFlex">
+              <div>
+                <h5>Internships by places</h5>
+                <div class="list">
+                    <a href="">Internship in India</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Delhi</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Bangalore</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Hyderabad</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Mumbai</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Chennai</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Gurgaon</a>
+                </div>
+                <div class="list">
+                    <a href="">Internship in Kolkata</a>
+                </div>
+                <div class="list">
+                    <a href="">Virtual internship</a>
+                </div>
+              </div>
+
+              <div>
+                  <!-- First section -->
+                <h5>Internship by Stream</h5>
+                <div class="list">
+                    <a href="">Computer Science Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Electronics Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Mechanical Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Civil Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Marketing Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Chemical Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Finance Internship</a>
+                </div>
+                <div class="list">
+                    <a href="">Summer Research Fellowship</a>
+                </div>
+                <div class="list">
+                    <a href="">Campus Ambassador Program</a>
+                </div>
+              </div>
+               <!-- End First section -->
+
+                <!-- Section section -->
+              <div>
+                  <h5>Online Trainings<span>OFFER</span></h5>
+                  <div class="list">
+                    <a href="">Web Development</a>
+                </div>
+                <div class="list">
+                    <a href="">Android App Development</a>
+                </div>
+                <div class="list">
+                    <a href="">Programming with Python</a>
+                </div>
+                <div class="list">
+                    <a href="">Data Science</a>
+                </div>
+                <div class="list">
+                    <a href="">Ethical Hacking</a>
+                </div>
+                <div class="list">
+                    <a href="">Core Java</a>
+                </div>
+                <div class="list">
+                    <a href="">Digital Marketing</a>
+                </div>
+                <div class="list">
+                    <a href="">Advanced Excel</a>
+                </div>
+                <div class="list">
+                    <a href="">Programming with C & C++</a>
+                </div>
+                </div>
+                <!-- End Section section -->
+                <!-- Third section -->
+              <div>
+                  <h5>About Internshala</h5>
+                  <div class="list">
+                    <a href="">About us</a>
+                </div>
+                <div class="list">
+                    <a href="">We're hiring</a>
+                </div>
+                <div class="list">
+                    <a href="">Hire interns for your company</a>
+                </div>
+                <div class="list">
+                    <a href="">Team Diary</a>
+                </div>
+                <div class="list">
+                    <a href="">Blog</a>
+                </div>
+                <div class="list">
+                    <a href="">Our Services</a>
+                </div>
+                <div class="list">
+                    <a href="">Terms & Conditions</a>
+                </div>
+                <div class="list">
+                    <a href="">Privacy</a>
+                </div>
+                <div class="list">
+                    <a href="">Contact us</a>
+                </div>
+                 <!-- End Fourth  section -->
+                  </div>
+                 
+             </div>
+             <hr id="hrLine">
+             <div class="copyright">
+                 <div class="media">
+                   <div><button id="playicon"><i class="ic-24-playstore"></i>Get Android App</button></div>
+                   <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                   <div><i class="ic-24-instagram"></i></div>
+                   <div><i class="ic-24-twitter"></i></div>
+                   <div><i class="ic-24-youtube"></i></i></div>
+                   <div><i class="ic-24-linkedin"></i></div>
+                 </div>
+                 <div class="copy">
+                    <div>© Copyright 2021 Internshala</div>
+                 </div>
+             </div>
+            </div>
+        </div>
+     </footer>
+</div>
+</body>
+</html>
+
+<script>
+    function checkLogin(){
+        let email = document.getElementById('email').value
+        let password = document.getElementById('password').value
+         if(email == ''){
+        document.getElementById('email').style.background='#FFFAFA'
+        document.getElementById('email').style.border="1px solid red"
+        document.getElementById('error-email').innerHTML="* This field is required"
+    }  
+    if(password == ''){
+        document.getElementById('password').style.background='#FFFAFA'
+        document.getElementById('password').style.border="1px solid red"
+        document.getElementById('error-password').innerHTML="* This field is required"
+    }
+
+        const students = JSON.parse(localStorage.getItem('students'))
+
+        for(i=0; i<students.length; i++){
+            if(students[i].email == email && students[i].password == password){
+                //alert('success')
+                 window.location.href='./intrenshala.html'
+            }
+            else if(email.length>1 && students[i].email != email){
+                document.getElementById('email').style.background='#FFFAFA'
+                document.getElementById('email').style.border="1px solid red"
+                document.getElementById('error-email').innerHTML="* This email is not registered"
+                document.getElementById('error-password').innerHTML=null
+            }
+            else if(password.length>1 && students[i].password != password){
+                document.getElementById('password').style.background='#FFFAFA'
+                document.getElementById('password').style.border="1px solid red"
+                document.getElementById('error-password').innerHTML="* Wrong password"
+            }
+        }
+    }
+</script>
