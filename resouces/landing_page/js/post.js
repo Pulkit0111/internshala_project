@@ -1,54 +1,56 @@
-var post =
-    [
-        {
-            heading: "Social Media Marketing",
-            tagline: "The Zowie Store",
-            launch_date: "4th June'21",
-            REWARDS: "₹5000",
-            apply_by: "11th June'21",
-            duration:"4 Weeks",
-            span: ['Experience', 'Part time allowed'],
-            source:"https://internshala.com/cached_uploads/logo%2F60be130364bec1623069443.jpg"
-        },
-        {
-            heading: "Mobile App Development",
-            tagline: "snippt",
-            launch_date: "4th June'21",
-            REWARDS: "₹5000",
-            apply_by: "11th June'21",
-            duration:"6 Months",
-            span: ['Experience','alow','Part time allowed'],
-            source:"https://internshala.com/cached_uploads/logo%2F5e2fdcb75bb791580194999.png"
-        },
-        {
-            heading: "Data Analytics (Supply Chain Management)",
-            tagline: "Ruby Capital",
-            launch_date: "11th June'21",
-            REWARDS: "₹5000",
-            apply_by: "11th June'21",
-            span: ['Experience', 'Part time allowed'],
-            source:"https://internshala.com/cached_uploads/logo%2F5e2fdd59cf2061580195161.png"
-        },
-        {
-            intpresent: "Internshala presents",
-            heading: "The Dream Icon Experience",
-            tagline: "You, your favourite icon, and the chance of a lifetime!",
-            launch_date: "4th June'21",
-            REWARDS: "₹5000",
-            apply_by: "11th June'21",
-            span: ['Experience', 'Part time allowed'],
-            source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
-        },
-        {
-            heading: "The Dream Icon Experience",
-            tagline: "You, your favourite icon, and the chance of a lifetime!",
-            launch_date: "4th June'21",
-            REWARDS: "₹5000, certificates & exciting mementos!",
-            apply_by: "11th June'21",
-            span: ['Experience', 'Part time allowed'],
-            source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
-        },
-    ];
+// var post =
+//     [
+//         {
+//             heading: "Social Media Marketing",
+//             tagline: "The Zowie Store",
+//             launch_date: "4th June'21",
+//             REWARDS: "₹5000",
+//             apply_by: "11th June'21",
+//             duration:"4 Weeks",
+//             span: ['Experience', 'Part time allowed'],
+//             source:"https://internshala.com/cached_uploads/logo%2F60be130364bec1623069443.jpg"
+//         },
+//         {
+//             heading: "Mobile App Development",
+//             tagline: "snippt",
+//             launch_date: "4th June'21",
+//             REWARDS: "₹5000",
+//             apply_by: "11th June'21",
+//             duration:"6 Months",
+//             span: ['Experience','alow','Part time allowed'],
+//             source:"https://internshala.com/cached_uploads/logo%2F5e2fdcb75bb791580194999.png"
+//         },
+//         {
+//             heading: "Data Analytics (Supply Chain Management)",
+//             tagline: "Ruby Capital",
+//             launch_date: "11th June'21",
+//             REWARDS: "₹5000",
+//             apply_by: "11th June'21",
+//             span: ['Experience', 'Part time allowed'],
+//             source:"https://internshala.com/cached_uploads/logo%2F5e2fdd59cf2061580195161.png"
+//         },
+//         {
+//             intpresent: "Internshala presents",
+//             heading: "The Dream Icon Experience",
+//             tagline: "You, your favourite icon, and the chance of a lifetime!",
+//             launch_date: "4th June'21",
+//             REWARDS: "₹5000",
+//             apply_by: "11th June'21",
+//             span: ['Experience', 'Part time allowed'],
+//             source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
+//         },
+//         {
+//             heading: "The Dream Icon Experience",
+//             tagline: "You, your favourite icon, and the chance of a lifetime!",
+//             launch_date: "4th June'21",
+//             REWARDS: "₹5000, certificates & exciting mementos!",
+//             apply_by: "11th June'21",
+//             span: ['Experience', 'Part time allowed'],
+//             source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
+//         },
+//     ];
+
+var post = JSON.parse(localStorage.getItem('postDetails'));
    
 function renderPost()
 {
