@@ -441,23 +441,6 @@
 .closebtn:hover{
   background-color: #007bff;
 }
-/* 
-#overlay {
-  position: fixed;
-  opacity: 0;
-  transition: 200ms ease-in-out;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, .4);
-  pointer-events: none;
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-} */
 
 .bg-modal {
   position: fixed;
@@ -477,7 +460,7 @@
 .modal-contents {
 	background-color: white;
 	text-align: center;
-	/* padding: 20px; */
+  height: auto;
 	position: relative;
 	border-radius: 6px;
   display: flex;
@@ -489,11 +472,6 @@
   transition: 600ms ease-in-out;
   pointer-events:fill;
   z-index: 10;
-
-      background: #fff;
-    border: none;
-    border-radius: 0;
-    min-height: 570px;
 }
 
 
