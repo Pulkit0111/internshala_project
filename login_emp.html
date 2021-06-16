@@ -606,7 +606,7 @@
        arr.push(empDeatails);
        localStorage.setItem('emplogin',JSON.stringify(arr));
               
-       var main = document.getElementById("main");
+       var main = document.getElementById("emp_form");
        let p = document.createElement('p');
        p.style.textAlign="center";
        p.style.paddingTop="20px";
@@ -616,17 +616,17 @@
       
        setTimeout(function() {
         main.querySelector('p').remove();
-       }, 5000)
-       
-       setTimeout(function() {
-        document.getElementById("loginBtn").click();
-       }, 2000);
+       }, 3000);
+        
+        setTimeout(function() {
+        location.reload();
+       }, 5000);
 
        email.value="";
        password.value="";
        first_name.value="";
        last_name.value="";
-       phone_primary.value=""
+       phone_primary.value="";
 
        
      
