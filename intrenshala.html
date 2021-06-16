@@ -19,108 +19,103 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        /* modal-sucess-css-start */
 
+    .modalLeftlast {
+        min-width: 120px;
+        max-width: 120px;
+        height: auto;
+        background-image: url("./resouces/login_page_student/image/modal_success_background.svg");
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+        border-radius: 6px 0 0 6px;
+        display: flex;
+        justify-content: center;
+    }
+    .modalLeftlast img{
+    vertical-align: middle;
+        border-style: none;
+        width: 48px;
+    }
 
-.modalLeftlast {
-    min-width: 120px;
-    max-width: 120px;
-    height: auto;
-    background-image: url("./resouces/login_page_student/image/modal_success_background.svg");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 6px 0 0 6px;
+    .modalRightlast {
     display: flex;
-    justify-content: center;
-}
-.modalLeftlast img{
-  vertical-align: middle;
-    border-style: none;
-    width: 48px;
-}
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 32px 32px 32px 24px;
+    }
+    .messagelast{
+    color: #484848;
+    font-size: 24px;
+    line-height: 1.57142857;
+    font-weight: 400;
+    text-align: left;
+    }
+    .closeBtnContlast{
+    margin-top: 8px;
+    text-align: right;
+    }
+    .closebtnlast{
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 16px;
+    margin-top: 16px;
+    background: #00A5EC;
+    border-radius: 3px;
+    border: 1px solid #00A5EC;
+    padding: 7px 15px;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.14285714;
+    font-size: 14px;
+    text-align: center;
+    float: right;
+    }
+    .closebtnlast:hover{
+    background-color: #007bff;
+    }
 
-.modalRightlast {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 32px 32px 32px 24px;
-}
-.messagelast{
-  color: #484848;
-  font-size: 24px;
-  line-height: 1.57142857;
-  font-weight: 400;
-  text-align: left;
-}
-.closeBtnContlast{
-  margin-top: 8px;
-  text-align: right;
-}
-.closebtnlast{
-  cursor: pointer;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #fff;
-  margin-left: 16px;
-  margin-top: 16px;
-  background: #00A5EC;
-  border-radius: 3px;
-  border: 1px solid #00A5EC;
-  padding: 7px 15px;
-  font-weight: 600;
-  min-width: 80px;
-  line-height: 1.14285714;
-  font-size: 14px;
-  text-align: center;
-  float: right;
-}
-.closebtnlast:hover{
-  background-color: #007bff;
-}
+    .bg-modallast {
+    position: fixed;
+    transition: 200ms ease-in-out;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    pointer-events: none;
+    }
 
-.bg-modallast {
-  position: fixed;
-  transition: 200ms ease-in-out;
-	background-color: rgba(0, 0, 0, 0.5);
-	position: absolute;
-	top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-	display: none;
-	justify-content: center;
-	align-items: center;
-  pointer-events: none;
-}
-
-.modal-contentslast {
-	background-color: white;
-	text-align: center;
-	position: relative;
-	border-radius: 6px;
-    display: flex;
-    border: 1px solid black;
-    box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
-    border: none;
-    font-family: sans-serif;
-    max-width: 648px; 
-    transition: 600ms ease-in-out;
-    pointer-events:fill;
-    z-index: 10;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    min-height: 57px;
-}
-
+    .modal-contentslast {
+        background-color: white;
+        text-align: center;
+        position: relative;
+        border-radius: 6px;
+        display: flex;
+        border: 1px solid black;
+        box-shadow: 0 12px 24px rgb(0 0 0 / 8%);
+        border: none;
+        font-family: sans-serif;
+        max-width: 648px; 
+        transition: 600ms ease-in-out;
+        pointer-events:fill;
+        z-index: 10;
+        background: #fff;
+        border: none;
+        border-radius: 0;
+        min-height: 57px;
+    }
 
   /* modal-sucess-css-end */
 
+    </style> 
 
-
-
-    </style>
 </head>
 <body>
     <div class="cont">
@@ -707,23 +702,24 @@
      </footer>
     </div>
 
-      <!-- modal-sucess-html-start -->
+       <!-- modal-sucess-html-start -->
 
- <div class="bg-modallast">
+  <div class="bg-modallast">
 	<div class="modal-contentslast">
         <div class="modalLeftlast">
             <img src="./resouces/login_page_student/image/successCheck.svg" alt="check"> 
         </div>
         <div class="modalRightlast">
             <div class="messagelast">Congrats! You’ve successfully applied.</div>
-            <!-- put login url in close button -->
+          
             <div class="closeBtnContlast"><button class="closebtnlast" onclick="(location.href='./intrenshala.html')">close</button></div> 
         </div> 
 	</div>
-</div>
+</div> 
 
 
   <!-- modal-sucess-html-end -->
+
 
 </body>
 <script type="text/javascript" src="./resouces/landing_page/js/script.js"></script>
@@ -733,18 +729,8 @@
 <script type="text/javascript" src="./resouces/landing_page/js/counter.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/filter.js"></script>
 <script>
-
-    var x = document.querySelectorAll('.applynow')
-x
-    x.forEach=addEventListener('click', showmodallast)
-
-        function showmodallast() {
-        document.querySelector('.bg-modallast').style.display = "flex";
-    };
-
-    // document.querySelector('.closebtnlast').addEventListener("click", function() {
-    //     document.querySelector('.bg-modallast').style.display = "none";
-    // });
-    
+    function showmodallast() {
+    document.querySelector('.bg-modallast').style.display = "flex";
+};
 </script>
 </html>
