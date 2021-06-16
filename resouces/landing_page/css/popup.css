@@ -209,7 +209,7 @@ input#submit2 {
 }
 
 form.register {
-/*   position: relative; */
+  position: relative;
   top: -380px;
   left: 0;
   font-size: 1em;
