@@ -489,6 +489,11 @@
   transition: 600ms ease-in-out;
   pointer-events:fill;
   z-index: 10;
+
+      background: #fff;
+    border: none;
+    border-radius: 0;
+    min-height: 570px;
 }
 
 
