@@ -264,7 +264,7 @@ function renderPost(post,status="")
         });
 
         var divLa = document.createElement('div');
-        divLa.innerHTML = `<a class= 'applynow' href="#">Apply Now <i class="ic-16-chevron-right"></i></a>`;
+        divLa.innerHTML = `<a href='#'>Apply Now <i class="ic-16-chevron-right"></i></a>`;
         div22.append(div221,divLa);
          
         div.append(div2, div21, div22);
@@ -276,5 +276,9 @@ function renderPost(post,status="")
 }
 
 renderPost();
-renderPost(JSON.parse(localStorage.getItem('postDetails')),'2');
+renderPost(JSON.parse(localStorage.getItem('postDetails')), '2');
+
+// function showmodallast() {
+// document.querySelector('.bg-modallast').style.display = "flex";
+// };
 
