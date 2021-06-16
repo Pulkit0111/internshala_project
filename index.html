@@ -134,9 +134,9 @@
         <!--search bar implementation-->
         <div class="search">
             <div class="size">
-            <input type="text" placeholder="What are you looking for?">
+            <input id="searchinput" type="text" placeholder="What are you looking for?">
             <span class="searchBtn">
-                <button type="button">
+                <button type="button" id="searchbtn">
                     <i class="icon_search ic-24-search"></i>
                 </button>
             </span>
@@ -541,9 +541,88 @@
         </div>
      </footer>
     </div>
+
+
+       <!-- modal-search-html-start -->
+
+    <div class="bg-modal">
+        <div class="modal-contents">
+            <div class="modal-body">
+                <div class="modal-body-header">
+                  <div class="looking-for-cont">
+                    <h6>I'm looking for Internship / Fresher Jobs in</h6>
+                  </div>
+                   <div> <button class="closebtnn">x</button></div>
+                </div>
+                <div class="internship-cont">
+                  <div class="modal-searchbar">
+                    <form id="search-btn-form">
+                      <div class="input-group">
+                        <input type="text" class="modal-input" placeholder="eg. MBA, Android, Mumbai, etc" id="modal-input">
+                        <span class="search-btn-cont">
+                          <button type="submit" id="modal-search-btn">Go</button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="popular-cont">
+                    <div class="pop-heading">Popular Cities</div>
+                    <div class="pop-body">
+                      <a href="./intrenshala.html" class="pop-item">Work from home</a>
+                      <a href="./intrenshala.html" class="pop-item">Delhi/NCR</a>
+                      <a href="./intrenshala.html" class="pop-item">Bangalore</a>
+                      <a href="./intrenshala.html" class="pop-item">Mumbai</a>
+                      <a href="./intrenshala.html" class="pop-item">Hyderabad</a>
+                      <a href="./intrenshala.html" class="pop-item">Chennai</a>
+                      <a href="./intrenshala.html" class="pop-item">Kolkata</a>
+                    </div>
+                  </div>
+                  <div class="popular-cont">
+                    <div class="pop-heading">Popular Cities</div>
+                    <div class="pop-body">
+                      <a href="./intrenshala.html" class="pop-item">Part-time</a>
+                      <a href="./intrenshala.html" class="pop-item">Engineering</a>
+                      <a href="./intrenshala.html" class="pop-item">MBA</a>
+                      <a href="./intrenshala.html" class="pop-item">NGO</a>
+                      <a href="./intrenshala.html" class="pop-item">Design</a>
+                      <a href="./intrenshala.html" class="pop-item">Science</a>
+                      <a href="./intrenshala.html" class="pop-item">Media</a>
+                      <a href="./intrenshala.html" class="pop-item">Humanities</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div> 
+        </div>
+    </div> 
+    
+
+
+    <!-- modal-search-html-end -->
+
+
 </body>
 <script type="text/javascript" src="./resouces/landing_page/js/script.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/banner.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/popup.js"></script>
 <script type="text/javascript" src="./resouces/landing_page/js/filter.js"></script>
+<script>
+    
+    document.getElementById('searchinput').addEventListener("click", function(){
+          document.querySelector('.bg-modal').style.display = "flex";
+
+    });
+    document.getElementById('searchbtn').addEventListener("click", function(){
+          document.querySelector('.bg-modal').style.display = "flex";
+
+    });
+    
+    document.querySelector('.closebtnn').addEventListener("click", function() {
+        document.querySelector('.bg-modal').style.display = "none";
+    });
+
+    document.getElementById('modal-search-btn').addEventListener("click", function() {
+       window.location.href='intrenshala.html'
+    });
+</script>
 </html>

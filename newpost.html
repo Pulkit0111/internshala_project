@@ -226,7 +226,7 @@
         </div>
         <div class="input">
             <p>Category</p>
-            <select name="category" id="category" >
+            <select name="category" id="category">
                 <option value="" disabled selected hidden   >e.g. Marketing</option>
                 <option value="android">Android App Development</option>
                 <option value="animation">Animation</option>
@@ -279,15 +279,26 @@
         </div>
         <div class="input">
          <p>Launch Date</p>
-         <input type="text" placeholder="Enter internship Launch date, Format : (DD/MM/YYYY)" name="L_date">
+         <input type="date" placeholder="Enter internship Launch date, Format : (DD/MM/YYYY)" name="L_date">
         </div>
         <div class="input">
          <p>Stipend</p>
-         <input type="text" placeholder="Enter internship Stipend in (Rs.)" name="stipend">
+         <input type="number" placeholder="Enter internship Stipend in (Rs.)" name="stipend">
         </div>
         <div class="input">
-         <p>Duration in (weeks/months/Years)</p>
-         <input type="text" placeholder="Enter internship Duration in (W/M/Y)" name="duration">
+         <p>Duration in (months)</p>
+         <select name="duration" id="duration">
+            <option value="" disabled selected hidden>e.g. 1 months</option>
+            <option value="1 Month">1 Month</option>
+            <option value="2 Months">2 Months</option>
+            <option value="3 Months">2 Months</option>
+            <option value="4 Months">4 Months</option>
+            <option value="6 Months">6 Months</option>
+            <option value="12 Months">12 Months</option>
+            <option value="18 Months">18 Months</option>
+            <option value="24 Months">24 Months</option>
+            <option value="36 Months">36 Months</option>
+        </select>
         </div>
         <div class="input">
          <p>Last Apply Date</p>
@@ -303,7 +314,7 @@
          </div>
         </form>
         <div class="postBtn">
-            <button id="resetSum">Reset</button>
+            <button id="resetSum" onclick="test()">Reset</button>
             <button id="posSum">Submit</button>
         </div>
      </div>
@@ -463,26 +474,34 @@
     </div>
 </body>
 <script>
+
+
+
+    
     var arr = JSON.parse(localStorage.getItem('emplogin'));
     var empButton = document.getElementById("posSum");
     var FormPostDe = document.getElementById("inputValue");
     empButton.addEventListener('click',addFunction);
     function addFunction()
     {
-      
-      
+    //   new details
+        let category = document.getElementById('category').value
+        let location = document.getElementById('location').value
+        let wfh = document.getElementById('wfh').value
+        let parttime = document.getElementById('parttime').value
+        let duration =  document.getElementById('duration').value
+
       var job_title = FormPostDe.querySelector('input[name="job_title"]');
       var designation = FormPostDe.querySelector('input[name="designation"]');
       var tagline = FormPostDe.querySelector('input[name="tagline"]');
       var launch_Date = FormPostDe.querySelector('input[name="L_date"]');
       var stipend = FormPostDe.querySelector('input[name="stipend"]');
-      var duration = FormPostDe.querySelector('input[name="duration"]');
       var e_apply = FormPostDe.querySelector('input[name="E_date"]');
       var keyword = FormPostDe.querySelector('input[name="keyword"]');
       var image = FormPostDe.querySelector('input[name="image"]');
 
 
-      var sm = FormPostDe.querySelectorAll('input');
+      var sm = FormPostDe.querySelectorAll('input,select');
       
       var value = true;
       sm.forEach(function(el)
@@ -534,9 +553,13 @@
             launch_date: launch_Date.value,
             REWARDS: stipend.value,
             apply_by: e_apply.value,
-            duration:duration.value,
             span: keyword.value.split(","),
-            source:image.value
+            source:image.value,
+            category,
+            duration:duration,
+            location,
+            wfh, 
+            parttime
          }
   
         

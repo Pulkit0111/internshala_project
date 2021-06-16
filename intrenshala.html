@@ -273,7 +273,7 @@
         <div class="gap">
 
         <label>Category</label>
-        <select name="category" id="category">
+        <select name="category" id="category" onchange="category(this.value,this.name)">
             <option value="" disabled selected hidden>e.g. Marketing</option>
             <option value="android">Android App Development</option>
             <option value="animation">Animation</option>
@@ -286,7 +286,7 @@
         </select>
 
         <label>Location</label>
-        <select name="location" id="location">
+        <select name="location" id="location" onchange="category(this.value,this.name)">
             <option value="" disabled selected hidden>e.g. Mumbai</option>
             <option value="banglore">Banglore</option>
             <option value="delhi">Delhi</option>
@@ -307,7 +307,7 @@
              </div>
               <div>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="check1" value = "yes" name ="wfh" onclick="category(this.value,this.name)" onchange="change(this.value)">
                     <span class="slide round"></span>
                   </label>
               </div>
@@ -319,7 +319,7 @@
             </div>
              <div>
                <label class="switch">
-                   <input type="checkbox">
+                   <input type="checkbox" id="check2" value = "yes" name ="parttime" onclick="category(this.value,this.name)" onchange="changepart(this.value)">
                    <span class="slide round"></span>
                  </label>
              </div>
@@ -330,7 +330,7 @@
                 <p>Desired minimum monthly stipend (₹)</p>
             </div>
              <div class="prang">
-                <input type="range" name="vol" min="0" max="12100" value="0">
+                <input type="range" name="REWARDS" min="0" max="10000" value="0" onchange="category(this.value,this.name)" onchange="changepart(this.value)">
                 <div class="rate">
                     <p>0</p>
                     <p>2k</p>
@@ -346,10 +346,22 @@
         <div class="gap">
 
             <label>Starting from (or after)</label>
-            <input type="text" placeholder="Choose date"/>
+            <input type="date" placeholder="Choose date" name="launch_date" onchange="category(this.value,this.name)"/>
+            
   
             <label>Max. duration (months)</label>
-            <input type="text" placeholder="Choose duration"/>
+            <select name="duration" id="duration" onchange="category(this.value,this.name)">
+                <option value="" disabled selected hidden>e.g. 1 months</option>
+                <option value="1 Month">1 Month</option>
+                <option value="2 Months">2 Months</option>
+                <option value="3 Months">2 Months</option>
+                <option value="4 Months">4 Months</option>
+                <option value="6 Months">6 Months</option>
+                <option value="12 Months">12 Months</option>
+                <option value="18 Months">18 Months</option>
+                <option value="24 Months">24 Months</option>
+                <option value="36 Months">36 Months</option>
+            </select>
           
       </div>
 

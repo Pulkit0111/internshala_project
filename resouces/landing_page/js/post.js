@@ -49,13 +49,123 @@
 //             source:"https://internshala.com/static/images/common/new_internshala_logo.svg"
 //         },
 //     ];
+var objArray = {};
+function category(val,name)
+{
+    
+    var snt = JSON.parse(localStorage.getItem('postDetails'));
+    const obj = { [name]: val };
+    objArray[name] = val;
+    if (objArray.category != undefined)
+    {
+        snt = snt.filter(function (a) {
+            return a.category == objArray.category;
+        });
+    }
+     
+    if (objArray.location != undefined)
+    {
 
-var post = JSON.parse(localStorage.getItem('postDetails'));
+        
+        snt = snt.filter(function (a) {
+            return a.location == objArray.location;
+        });
+    }
+
+    if (objArray.wfh != undefined)
+    {
+
+        
+        snt = snt.filter(function (a)
+        {
+            if (objArray.wfh == 'yes')
+            {
+                return a.wfh == objArray.wfh;
+            }
+            else
+            {
+                return snt;
+            }
+           
+        });
+    }
+
+    if (objArray.parttime != undefined)
+    {
+
+        
+        snt = snt.filter(function (a)
+        {
+            if (objArray.parttime == 'yes')
+            {
+                return a.parttime == objArray.parttime;
+            }
+            else
+            {
+                return snt;
+            }
+           
+        });
+    }
+
+    if (objArray.REWARDS != undefined)
+    {
+
+        
+        snt = snt.filter(function (a)
+        {
+            if (objArray.REWARDS > 0)
+            {
+                return a.REWARDS > Number(objArray.REWARDS);
+            }
+            else
+            {
+                return snt;
+            }
+               
+            
+        });
+    }
+
+    if (objArray.launch_date != undefined)
+    {
+
+        
+        snt = snt.filter(function (a)
+        {
+                return a.launch_date >= objArray.launch_date;
+            
+        });
+    }
+
+    if (objArray.duration != undefined)
+    {
+
+        
+        snt = snt.filter(function (a)
+        {
+                return a.duration == objArray.duration;
+            
+        });
+    }
+
+
+
+
+    renderPost(snt);
+}
+
+
+
+
    
-function renderPost()
+function renderPost(post,status="")
 {
     var RSlider = document.getElementById("RSlider");
-
+    if (status != 2)
+    {
+        RSlider.innerHTML = "";
+    }
     var post_count = document.getElementById("postcount");
     post_count.innerText = post.length;
 
@@ -165,4 +275,4 @@ function renderPost()
     
 }
 
-renderPost();
+renderPost(JSON.parse(localStorage.getItem('postDetails')),'2');
