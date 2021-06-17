@@ -894,6 +894,7 @@
         for(i=0; i<students.length; i++){
             if(students[i].email == email && students[i].password == password){
                 //alert('success')
+                localStorage.setItem('stu_login',JSON.stringify({email:email,name:students[i].firstName+" "+students[i].lastName}))
                  window.location.href='./intrenshala.html'
             }
             else if(email.length>1 && students[i].email != email){
@@ -909,4 +910,17 @@
             }
         }
     }
+
+
+
+    function acess()
+    {
+        if(localStorage.getItem('login') != null || localStorage.getItem('stu_login') != null )
+        {
+            alert('You are already Login');
+            window.location.href="./index.html";
+        }
+    }
+
+    acess();
 </script>

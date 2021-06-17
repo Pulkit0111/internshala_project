@@ -34,7 +34,8 @@
             </div><!--.popup-header-->
             <div class="popup-content">
 
-            <form action="#" class="sign-in">
+            <form class="sign-in" id="stuId">
+                <div id="main2"></div>
                 <div class="googlebtn">  
                     <button><img src="./resouces/landing_page/image/google_logo.webp"/>Login with Google</button>
                 </div>
@@ -43,17 +44,22 @@
                     <p>OR</p>
                     <hr class="he">
                 </div>
+                <div>
                 <label for="email">Email:</label>
                 <input type="text" id="email" placeholder="john@example.com" autocomplete="off">
+            </div>
+            <div>
                 <label for="password">Password:</label>
                 <input type="password" id="password" autocomplete="off" placeholder="Must be atleast 6 characters">
+            </div>
                 <div class="link">
                 <a href="">Forgot Password?</a>
                 </div>
-                <input type="submit" id="submit" value="Login">
-                
+            <div>
+                <input type="submit" style="background-color: #00a5ec;color: white;" id="submit3" value="Login">
+            </div>
                 <div class="btmclass">
-                    <p>New to Internshala? Register (<a href="#"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html"><b>Company</b></a>)</p>
                 </div>
             </form>
 
@@ -75,7 +81,7 @@
                 <input type="button" id="submit2" value="Login">
               </div>
                 <div class="btmclass">
-                    <p>New to Internshala? Register (<a href="./resouces/login_page_student/login.html"><b>Student</b> </a>/ <a href="#"><b>Company</b></a>)</p>
+                    <p>New to Internshala? Register (<a href="./login_student.html"><b>Student</b> </a>/ <a href="./login_emp.html                              "><b>Company</b></a>)</p>
                 </div>
               </form>
             </div><!--.popup-content-->
@@ -528,7 +534,6 @@
              <div class="copyright">
                  <div class="media">
                    <div><button id="playicon"><i class="ic-24-playstore"></i>Get Android App</button></div>
-                   <div><i class="fa fa-instagram" aria-hidden="true"></i></div>
                    <div><i class="ic-24-instagram"></i></div>
                    <div><i class="ic-24-twitter"></i></div>
                    <div><i class="ic-24-youtube"></i></i></div>
