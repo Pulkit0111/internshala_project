@@ -897,12 +897,12 @@
                 localStorage.setItem('stu_login',JSON.stringify({email:email,name:students[i].firstName+" "+students[i].lastName}))
                  window.location.href='./intrenshala.html'
             }
-            else if(email.length>1 && students[i].email != email){
-                document.getElementById('email').style.background='#FFFAFA'
-                document.getElementById('email').style.border="1px solid red"
-                document.getElementById('error-email').innerHTML="* This email is not registered"
-                document.getElementById('error-password').innerHTML=null
-            }
+            // else if(email.length>1 && students[i].email != email){
+            //     document.getElementById('email').style.background='#FFFAFA'
+            //     document.getElementById('email').style.border="1px solid red"
+            //     document.getElementById('error-email').innerHTML="* This email is not registered"
+            //     document.getElementById('error-password').innerHTML=null
+            // }
             else if(password.length>1 && students[i].password != password){
                 document.getElementById('password').style.background='#FFFAFA'
                 document.getElementById('password').style.border="1px solid red"
@@ -910,8 +910,6 @@
             }
         }
     }
-
-
 
     function acess()
     {
