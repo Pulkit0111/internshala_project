@@ -83,65 +83,52 @@
                         <!-- form --start -->
                         <div class="form" id="emp_form">
                             <!-- form section 1 -->
-                            <div class="form-group">
-                                <label for="email" class="control-label">Official Email Id </label>
-                                <div data-toggle="popover" data-content="<div class='email_popover_close'><i class='ic-24-cross'></i></div><div>An official id (example: <span style='color:#1295c9' class='email_example'>name@company_name.com</span>) is strongly recommended as it helps us verify that you represent the company and enables us to provide you a quick service. If you're a student, please register <a href='https://internshala.com/registration/student' tabindex='20000'>here</a>.</div>" id="email_desktop">
-                                    <input type="email" class="form-control email-field-employer-registration" id="email" name="email" placeholder="name@company_name.com">
+                            <div class="formGroup">
+                                <label for="email">Official Email Id </label>
+                                <div>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="name@company_name.com">
                                 </div>
-                                <p id="span_note" style="margin-left:2px;">
-                                </p>
                             </div>
                             <!-- form section 2 -->
-                           <div class="form-group">
-                                <label for="password" class="control-label">Password</label>
+                           <div class="formGroup">
+                                <label for="password">Password</label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Minimum 6 characters">
                             </div>
                             <!-- form section 3 -->
-                           <div class="row">
-                                <div class="col" id="first_name_container">
-                                    <div class="form-group">
-                                        <label for="first_name" class="control-label">First Name</label>
+                           <div class="nameRow">
+                                <div class="formCol" id="first_name_container">
+                                    <div class="formGroup">
+                                        <label for="first_name">First Name</label>
                                         <input type="text" class="form-control" id="first_name" name="first_name" placeholder="Your First Name">
                                     </div>
                                 </div>
-                                <div class="col" id="last_name_container">
-                                    <div class="form-group">
-                                        <label for="last_name" class="control-label">Last Name</label>
+                                <div class="formCol" id="last_name_container">
+                                    <div class="formGroup">
+                                        <label for="last_name">Last Name</label>
                                         <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Your Last Name">
                                     </div>
                                 </div>
                             </div>
                             <!-- form section 4 -->
-                           <div class="form-group">
-                                <label for="phone_primary" class="control-label">Mobile Number</label>
-                                <div class="row" id="phone_container">
-                                    <div class="col col-3">
-                                        <input type="text" disabled="disabled" class="form-control country-code" id="country_code" name="country_code" value="+91">
+                           <div class="formGroup">
+                                <label for="phone_primary">Mobile Number</label>
+                                <div class="nameRow" id="phone_container">
+                                    <div class="formCol col-3">
+                                        <input type="text" disabled="disabled" class="form-control" id="country_code" name="country_code" value="+91">
                                     </div>
-                                    <div class="col col-9">
-                                        <input type="tel" class="form-control mobile-number" id="phone_primary" minlength="10" maxlength="10" name="phone_primary" placeholder="10 digit mobile number">
+                                    <div class="formCol col-9">
+                                        <input type="tel" class="form-control" id="phone_primary" minlength="10" maxlength="10" name="phone_primary" placeholder="10 digit mobile number">
                                     </div>
                                 </div>
                             </div>
                             <!-- form section 5-extras -->
-                            <div id="job_registration_form_extras" style="margin-top: 16px">
+                            <div id="jobRegExtra" >
                                 <div class="label_toc">
-                                    <span style="color: #333333; line-height: 1.57; font-weight: 400">
-                                        By registering, you agree to our <a href="/terms#employer" target="_blank">Terms and Conditions</a>.
+                                    <span>
+                                        By registering, you agree to our <a href="#" >Terms and Conditions</a>.
                                     </span>
                                 </div>
-
-                                <div id="job_registration_button_container" style="display: none; margin-top: 16px;">
-                                    <div id="job_employer_registration_button">
-                                        <button type="submit" class="btn btn-primary">Post Job Now</button>
-                                    </div>
-                                    <div class="label_toc_2">
-                                        <div class="cta-below-2">
-                                            Already registered? <a data-toggle="modal" data-target="#login-modal">Login here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="internship_registration_button_container" style="display: block">
+                                <div id="internship_registration_button_container">
                                     <div id="job_employer_registration_button">
                                         <button type="submit" class="btn btn-primary" id="emp_res">Register Now</button>
                                     </div>
@@ -186,11 +173,6 @@
         <!-- company div including testimonials--start -->
         <div class="company">
             <div class="heading"><p>Trusted by 1 Lac+ companies</p></div>
-            <!-- <div class="profileCard">
-                <div class="profile"></div>
-                <div class="feedback"></div>
-            </div> -->
-
 
             <!-- ------------------imported carousel code-start---------------- -->
 

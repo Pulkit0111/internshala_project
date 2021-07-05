@@ -85,7 +85,6 @@ body {
   margin-top: 10px;
   box-shadow: 0 8px 16px rgb(0 0 0 / 8%);
   margin-bottom: 0;
-
   position: relative;
   z-index: 0;
   border-radius: 6px;
@@ -93,7 +92,7 @@ body {
   background: #fff;
   display: block;
 }
-.form-group {
+.formGroup {
   clear: both;
   margin-bottom: 16px;
 }
@@ -125,14 +124,13 @@ label {
   font-size: 14px;
   height: 40px;
   line-height: 1.14285714;
-  font-family: Inter, sans-serif;
+  font-family: sans-serif;
   display: block;
   width: 100%;
   font-weight: 400;
 }
 .form > input {
   text-rendering: auto;
-  color: -internal-light-dark(black, white);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -141,45 +139,40 @@ label {
   display: inline-block;
   text-align: start;
   appearance: auto;
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
-  -webkit-rtl-ordering: logical;
   cursor: text;
   margin: 0em;
   font: 400 13.3333px Arial;
   padding: 1px 2px;
   border-width: 2px;
   border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
   border-image: initial;
   border-radius: 3px !important;
   outline: none;
 }
-.row {
+.nameRow {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
 }
-.form .row .col:first-of-type {
+.form .nameRow .formCol:first-of-type {
   padding-left: 15px;
   padding-right: 3px;
 }
-.form .row .col:last-of-type {
+.form .nameRow .formCol:last-of-type {
   padding-left: 3px;
   padding-right: 15px;
 }
-.col {
+.formCol {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
 }
 .col-3 {
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
   max-width: 25%;
 }
 .col-9 {
-  -ms-flex: 0 0 75%;
   flex: 0 0 75%;
   max-width: 75%;
 }
@@ -201,15 +194,7 @@ select,
 textarea {
   margin: 0;
 }
-.restricted_keyword_error {
-  font-size: 12px;
-  color: #e5330e;
-  margin-top: -8px;
-  margin-bottom: 16px;
-  padding: 0 16px;
-  font-family: Inter, sans-serif;
-  font-weight: 500;
-}
+
 #internship_registration_button_container {
   display: block;
 }
@@ -246,7 +231,7 @@ textarea {
   margin: 0;
   font-family: inherit;
 }
-#job_registration_form_extras .label_toc_2 {
+#jobRegExtra .label_toc_2 {
   text-align: center;
 }
 .hiring {
