@@ -77,8 +77,6 @@ body {
   text-align: left;
 }
 .form {
-  /* display: flex;
-    flex-direction: column;   */
   border: 0;
   background-color: #fff;
   box-sizing: border-box;
