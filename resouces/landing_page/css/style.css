@@ -898,39 +898,6 @@
   margin-right: 4px;
 }
 
-/* modal-searchbar-css-start */
-
-/* .modalLeft {
-    min-width: 120px;
-    max-width: 120px;
-    height: auto;
-    background-image: url("../image/modal_success_background.svg");
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
-    border-radius: 6px 0 0 6px;
-    display: flex;
-    justify-content: center;
-}
-.modalLeft img{
-  vertical-align: middle;
-    border-style: none;
-    width: 48px;
-}
-
-.modalRight {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 32px 32px 32px 24px;
-}
-.message{
-  color: #484848;
-  font-size: 14px;
-  line-height: 1.57142857;
-  font-weight: 400;
-  text-align: left;
-} */
 .closeBtnCont {
   margin-top: 8px;
   text-align: right;

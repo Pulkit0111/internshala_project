@@ -9,7 +9,6 @@
 @media(max-width:500px){
   #slideshow{
     height: 45vw;
-    /* max-height: 160px; */
     width: 100%;
   }
 }
