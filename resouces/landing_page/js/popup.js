@@ -174,7 +174,7 @@ var arr2 = JSON.parse(localStorage.getItem('students'));
 var empButton = document.getElementById("submit3");
 empButton.addEventListener('click',addFunction3);
 
-function addFunction3()
+function addFunction3(e)
 {
   
   var empForm2 = document.getElementById("stuId");
@@ -230,7 +230,6 @@ function addFunction3()
      var isValidate = false;
       var num = arr2.forEach(function(va)
       {
-        console.log();
            if(va.email == email.value && va.password == password.value)
            {
               isValidate = true;
@@ -241,13 +240,15 @@ function addFunction3()
             
       });
       var main = document.getElementById("main2");
-      let p = document.createElement('p');
+    let p = document.createElement('p');
+    var snn = false;
       if(isValidate)
       {
         p.style.textAlign="center";
         p.style.paddingTop="20px";
         p.style.color="green";
-        p.innerHTML = "<b>You have successfully Login :)</b>";   
+        p.innerHTML = "<b>You have successfully Login :)</b>";
+        snn = true
       }
       else
       {
@@ -260,7 +261,11 @@ function addFunction3()
     
      setTimeout(function() {
        main.querySelector('p').remove();
-       location.reload();
+       if (snn)
+        {
+        location.reload();
+        }
+       
      }, 5000);
     
   }
