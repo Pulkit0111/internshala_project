@@ -38,7 +38,7 @@
 
 .header > .height-cont > .flex > .btn {
   display: flex;
-  width: 70%;
+  width: 60%;
   justify-content: space-evenly;
   font-family: sans-serif;
   font-weight: bold;
@@ -49,6 +49,9 @@
   height: 100%;
   display: flex;
   align-items: center;
+}
+.header > .height-cont > .flex > .btn > div:nth-child(4) {
+  margin-right: -15px;
 }
 
 .header > .height-cont > .flex > .btn > div > a {
