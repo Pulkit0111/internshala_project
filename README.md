@@ -30,6 +30,12 @@ Working
 8. Functionality to apply for an internship by student
 9. Popup functionality for successful registration and successful internship application
 
+##  Screenshots
+
+![internshala1](https://user-images.githubusercontent.com/81069961/133729877-4496b4a7-0b83-4700-ad04-d3c8d9591988.png)
+![internshala2](https://user-images.githubusercontent.com/81069961/133729896-f52bc18d-45d7-44b5-a6bb-a893eaba2e10.png)
+![internshala3](https://user-images.githubusercontent.com/81069961/133729898-905c927b-9a82-4254-96f5-9f54ed819829.png)
+
 ## Image, illustration source
 All images, logos and illustrations are taken from Internshala website itself (https://internshala.com/)
 
